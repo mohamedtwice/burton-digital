@@ -1,0 +1,107 @@
+[
+    {
+      "Name": "Michael Klecker",
+      "Department": "School of Kinesiology",
+      "Award": "CS/BU Operational Excellence Award",
+      "Image": "https://kin.umn.edu/sites/kin/files/styles/coh_x_large/public/KleckerM-2019.jpg",
+      "Link": "https://kin.umn.edu/staff/michael-klecker"
+    },
+    {
+      "Name": "Katie Loop",
+      "Department": "Curriculum and Instruction",
+      "Award": "Lupton CS/BU Outstanding Service",
+      "Image": "https://www.cehd.umn.edu/sites/cehd/files/2024-10/K%20Loop%20Bio%20Pic.jpg",
+      "Link": "https://ci.umn.edu/staff/katie-loop"
+    },
+    {
+      "Name": "Lindsey Weiler",
+      "Department": "Family Social Science",
+      "Award": "Marty and Jack Rossman Award",
+      "Image": "https://fsos.umn.edu/sites/fsos/files/styles/coh_x_large/public/2023-07/Lindsey%20Weiler.jpg?itok=80NfCeRe",
+      "Link": "https://fsos.umn.edu/lindsey-weiler"
+    },
+    {
+      "Name": "Saida Abdi",
+      "Department": "School of Social Work",
+      "Award": "New Career Excellence",
+      "Image": "https://ssw.umn.edu/sites/ssw/files/styles/coh_x_large/public/AbdiS-2019.jpg",
+      "Link": "https://ssw.umn.edu/saida-abdi"
+    },
+    {
+      "Name": "Anna Li",
+      "Department": "Educational Psychology",
+      "Award": "Outstanding Student Employee Award",
+      "Image": "https://www.cehd.umn.edu/sites/cehd/files/2024-10/Anna%20Li%20Staff%20Photo.jpg",
+      "Link": ""
+    },
+    {
+      "Name": "Faith Miller",
+      "Department": "Educational Psychology",
+      "Award": "Excellence in Academic Advising",
+      "Image": "https://edpsych.umn.edu/sites/edpsych/files/styles/coh_x_large/public/MillerF-2014.jpg",
+      "Link": "https://edpsych.umn.edu/faith-miller"
+    },
+    {
+      "Name": "Kirsten Collins",
+      "Department": "Family Social Science",
+      "Award": "Excellence in Academic Advising",
+      "Image": "https://fsos.umn.edu/sites/fsos/files/styles/x_small_square/public/2023-05/CollinsK.jpeg",
+      "Link": "https://fsos.umn.edu/people/staff"
+    },
+    {
+      "Name": "Chalandra Bryant",
+      "Department": "Family Social Science",
+      "Award": "Excellence in Research",
+      "Image": "https://fsos.umn.edu/sites/fsos/files/styles/coh_x_large/public/2023-07/Bryant-C-2.jpg",
+      "Link": "https://fsos.umn.edu/chalandra-bryant"
+    },
+    {
+      "Name": "Panayiota (Pani) Kendeou",
+      "Department": "Educational Psychology",
+      "Award": "Educational Leadership Award",
+      "Image": "https://edpsych.umn.edu/sites/edpsych/files/styles/coh_x_large/public/kendeou_2.JPG",
+      "Link": "https://edpsych.umn.edu/panayiota-kendeou"
+    },
+    {
+      "Name": "Timothy Piehler",
+      "Department": "Family Social Science",
+      "Award": "Distinguished Teaching Award",
+      "Image": "https://fsos.umn.edu/sites/fsos/files/styles/coh_x_large/public/2023-07/Timothy%20Piehler.jpg",
+      "Link": "https://fsos.umn.edu/timothy-piehler"
+    },
+    {
+      "Name": "Jeffrey Bye",
+      "Department": "Educational Psychology",
+      "Award": "Distinguished Teaching Award",
+      "Image": "https://edpsych.umn.edu/sites/edpsych/files/styles/coh_x_large/public/ByeJ-2021.jpg",
+      "Link": "https://edpsych.umn.edu/jeffrey-bye"
+    },
+    {
+      "Name": "Nicole LaVoi",
+      "Department": "School of Kinesiology",
+      "Award": "Outstanding P&A Faculty Achievement Award",
+      "Image": "https://kin.umn.edu/sites/kin/files/styles/coh_x_large/public/LaVoiN-2017.jpg?itok=XV4GYBBb",
+      "Link": "https://kin.umn.edu/nicole-lavoi"
+    },
+    {
+      "Name": "Xiaoran Sun",
+      "Department": "Family Social Science",
+      "Award": "AwardWomen’s Philanthropic Leadership Circle Rising Star",
+      "Image": "https://fsos.umn.edu/sites/fsos/files/styles/coh_x_large/public/2023-07/Xiaoran%20Sun.jpg",
+      "Link": "https://fsos.umn.edu/xiaoran-sun"
+    },
+    {
+      "Name": "Tessa Houghton",
+      "Department": "School of Social Work",
+      "Award": "Outstanding Student Employee Award",
+      "Image": "https://ssw.umn.edu/sites/ssw/files/styles/coh_x_large/public/2024-02/IMG_3016_Original%20%281%29.jpg",
+      "Link": "https://ssw.umn.edu/student-workers/tessa-houghton"
+    },
+    {
+      "Name": "Amber Fink",
+      "Department": "CEHD Administration",
+      "Award": "Outstanding Administrative P&A Achievement",
+      "Image": "https://www.cehd.umn.edu/sites/cehd/files/2024-10/AFink%20photo.jpeg",
+      "Link": ""
+    }
+  ]

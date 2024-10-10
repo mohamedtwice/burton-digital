@@ -1,0 +1,188 @@
+'use client';
+
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
+import dynamic from 'next/dynamic';
+import PageTransition from '@/components/PageTransition';
+import gopherWayImage from '../../public/images/gopher_way.jpg'
+import deanRodriguezImage from '../../public/images/DeanRodriguez.jpg'
+import VideoRotation from '@/components/VideoRotation';
+const MotionMain = dynamic(() => import('../components/MotionMain'), { ssr: false });
+const MotionDiv = dynamic(() => import('../components/MotionDiv'), { ssr: false });
+
+const INACTIVITY_TIMEOUT = 20000; // 20 seconds
+
+const HomePage = () => {
+  const [lastInteractionTime, setLastInteractionTime] = useState(Date.now());
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isClient) return;
+
+    const intervalId = setInterval(() => {
+      if (Date.now() - lastInteractionTime > INACTIVITY_TIMEOUT) {
+        // Reset to home page after inactivity
+        window.history.pushState(null, '', '/');
+      }
+    }, 1000);
+
+    return () => clearInterval(intervalId);
+  }, [lastInteractionTime, isClient]);
+
+  const handleInteraction = () => {
+    if (!isClient) return;
+    setLastInteractionTime(Date.now());
+  };
+
+  const options = [
+    { id: 1, title: 'People Directory', href: '/directory', color: 'bg-blue-400', gridArea: 'people' },
+    { id: 2, title: 'Gopher Way', href: 'https://z.umn.edu/GopherWay-Burton', color: 'bg-green-400', gridArea: 'map' },
+    { id: 5, title: 'Campus Maps', href: 'https://z.umn.edu/Buildings-Burton', color: 'bg-purple-400', gridArea: 'building' },
+    { id: 3, title: 'CEHD Awards', href: '/cehd', color: 'bg-yellow-400' },
+    { id: 4, title: "CEHD Dean's List", href: '/kin', color: 'bg-red-400' },
+  ];
+
+  console.log(gopherWayImage)
+  return (
+    <PageTransition>
+      {isClient && (
+        <MotionMain className="flex flex-col">
+          <section className="w-full bg-white" onClick={handleInteraction}>
+
+          <div className="relative w-full h-[1140px] bg-[#FFDE79]">
+              <video
+                className="absolute top-0 left-0 w-full h-full object-cover"
+                src="https://player.vimeo.com/progressive_redirect/playback/970909944/rendition/1080p/file.mp4?loc=external&signature=491f6a5e397a0adf16f1f82a2b211a482a98718e86fd379ef647b7ba60afd439"
+                autoPlay
+                loop
+                muted
+              ></video>
+          </div>
+            <div className="grid grid-cols-2 gap-10 p-12 h-[1020px] p-10">
+              <div className="w-full h-full">
+              <div className="relative w-full h-[100%]" style={{ backgroundImage: `url('https://connect.cehd.umn.edu/sites/connect/files/styles/coh_x_large_super_landscape/public/2024-05/Feat1_Splash_f22-1024x512.jpg?h=d28b8abe&itok=sA_qum5U')`, backgroundSize: 'cover', backgroundPosition: 'center center' }}>
+                  <Link key="1" href="/directory/" passHref className=" ">
+                    <MotionDiv
+                      className={`flex flex-col items-start justify-between cursor-pointer w-full h-full p-8`}
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <h2 className="text-white text-6xl font-black" style={{ textShadow: '2px 2px 4px #7a0019' }}>People Directory</h2>
+                     <span className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-2xl font-bold px-6 py-2 shadow-lg">Tap here to find CEHD Faculty and Staff.</span>
+                    </MotionDiv>
+                  </Link>
+                </div>
+              </div>
+              <div className="w-full h-full py-10">
+                <div className="relative w-full h-[43%]" style={{ backgroundImage: `url('https://pts.umn.edu/sites/pts.umn.edu/files/2024-05/wbs_hero.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center center' }}>
+                  <Link key="2" href="https://z.umn.edu/GopherWay-Burton" passHref className=" ">
+                    <MotionDiv
+                      className={`flex flex-col items-start justify-between cursor-pointer w-full h-full p-8`}
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <h2 className="text-white text-6xl font-black" style={{ textShadow: '2px 2px 4px #7a0019' }}>Gopher Way</h2>
+                     <span className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-2xl font-bold px-6 py-2 shadow-lg">Navigate the tunnels and skyways that connect our campus</span>
+                    </MotionDiv>
+                  </Link>
+                </div>
+                <div className="relative w-full h-[43%] mt-10" style={{ backgroundImage: `url('https://pts.umn.edu/sites/pts.umn.edu/files/2023-10/bus_banner.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center center' }}>
+                <Link key="3" href="https://z.umn.edu/Buildings-Burton" passHref className="">
+                    <MotionDiv
+                      className={`flex flex-col items-start justify-between cursor-pointer w-full h-full p-8`}
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <h2 className="text-white text-6xl font-black" style={{ textShadow: '2px 2px 4px #7a0019' }}>Campus Maps</h2>
+                     <span className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-2xl font-bold px-6 py-2 shadow-lg">Find more information about campus buildings</span>
+                    </MotionDiv>
+                  </Link>
+                </div>
+                <div className="relative w-full h-[10%] p-10">
+                <Link key="7" href="https://campusmaps.umn.edu/" passHref className="">
+                  <MotionDiv
+                    className={`bg-[#FFDE79] p-6 text-2xl font-bold text-[#7a0019] cursor-pointer w-full h-[10%] flex flex-row items-center`}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mt-1 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3l7 7-7 7M21 3l-7 7 7 7" />
+                    </svg>
+                    Tap here for more campus map information.
+                  </MotionDiv>
+                </Link>
+                </div>
+                
+              </div>
+            </div>
+
+
+            <div className="relative h-[510px] py-5 mx-10">
+              <VideoRotation />
+              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 mb-4">
+                <a
+                  href="https://cehd.umn.edu"
+                  className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-2xl font-bold px-6 py-2 shadow-lg"
+                >
+                  Visit CEHD
+                </a>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-2 gap-10 p-10 h-[920px]">
+              <div className="w-full h-full py-10">
+                <div className="relative w-full h-[47%]" style={{ backgroundImage: `url('https://www.cehd.umn.edu/sites/cehd/files/styles/coh_x_large/public/2024-06/2022_CEHD%20Commencement_NicoleNeri_001.jpg?itok=3CIk2jmR')`, backgroundSize: 'cover', backgroundPosition: 'center center' }}>
+                  <Link key="2" href="https://www.cehd.umn.edu/about" passHref className=" ">
+                    <MotionDiv
+                      className={`flex flex-col items-start justify-between cursor-pointer w-full h-full p-8`}
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <h2 className="text-white text-6xl font-black" style={{ textShadow: '2px 2px 4px #7a0019' }}>CEHD History</h2>
+                     <span className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-2xl font-bold px-6 py-2 shadow-lg">More than 100 years of excellence</span>
+                    </MotionDiv>
+                  </Link>
+                </div>
+                <div className="relative w-full h-[47%] mt-10" style={{ backgroundImage: `url('https://pbs.twimg.com/media/GY03trTXwAAHuM5?format=jpg&name=large')`, backgroundSize: 'cover', backgroundPosition: 'top center' }}>
+                <Link key="3" href="/cehd-awards/" passHref className="">
+                    <MotionDiv
+                      className={`flex flex-col items-start justify-between cursor-pointer w-full h-full p-8`}
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <h2 className="text-white text-6xl font-black" style={{ textShadow: '2px 2px 4px #7a0019' }}>CEHD Awards</h2>
+                     <span className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-2xl font-bold px-6 py-2 shadow-lg">Learn about outstanding work in the college</span>
+                    </MotionDiv>
+                  </Link>
+                </div>
+                
+              </div>
+              <div className="w-full h-full">
+
+              <div className="relative w-full h-[100%]" style={{ backgroundImage: `url(${deanRodriguezImage.src})`, backgroundSize: 'cover', backgroundPosition: 'top center' }}>
+              <Link key="6" href="/deans-list/" passHref className="">
+              <MotionDiv
+                      className={`flex flex-col items-start justify-between cursor-pointer w-full h-full p-8`}
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <h2 className="text-white text-6xl font-black" style={{ textShadow: '2px 2px 4px #7a0019' }}>CEHD Dean&apos;s List</h2>
+                     <span className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-2xl font-bold px-6 py-2 shadow-lg">Congratulations to our scholars on the list</span>
+                    </MotionDiv>
+                  </Link>
+                </div>
+              </div>
+            </div>
+
+          </section>
+        </MotionMain>
+      )}
+    </PageTransition>
+  );
+};
+
+export default HomePage;
