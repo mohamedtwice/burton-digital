@@ -16,7 +16,7 @@ export default function DirectoryPage() {
     department: ''
   });
   const [isClient, setIsClient] = useState(false);
-  const [animatedCount, setAnimatedCount] = useState(0);
+  const [animatedCount, setAnimatedCount] = useState(peopleData.length);
 
   useEffect(() => {
     const applyFilters = () => {
@@ -44,7 +44,7 @@ export default function DirectoryPage() {
     const end = filteredPeople.length;
     if (start === end) return;
 
-    const duration = 300; // Faster duration of the animation in ms
+    const duration = 50; // Twice as fast duration of the animation in ms
     const increment = end > start ? 1 : -1;
     const stepTime = Math.abs(Math.floor(duration / (end - start)));
 
@@ -74,6 +74,7 @@ export default function DirectoryPage() {
 
   const handleReset = () => {
     setFilters({ search: '', department: '' });
+    setAnimatedCount(people.length); // Set count directly without animation
     const container = document.querySelector('.people-container');
     if (container) {
       container.scrollTop = 0; // Scroll the container to the top
