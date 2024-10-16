@@ -2,149 +2,25 @@
 
 import { useState, useEffect } from 'react';
 import PageTransition from '@/components/PageTransition';
-import axios from 'axios';
 import Link from 'next/link';
+import peopleData from '../../../public/data/people.json'; // Adjust the path as necessary
 
 export default function DirectoryPage() {
-  const [people, setPeople] = useState([]);
-  const [filteredPeople, setFilteredPeople] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [people, setPeople] = useState(peopleData);
+  const [filteredPeople, setFilteredPeople] = useState(peopleData);
+  const [loading, setLoading] = useState(false); // No need to fetch, so not loading
   const [loadingMore, setLoadingMore] = useState(false);
   const [error, setError] = useState(null);
   const [filters, setFilters] = useState({
-    category: '',
     search: '',
     department: ''
   });
-  const [personTypeMap, setPersonTypeMap] = useState({});
   const [isClient, setIsClient] = useState(false);
   const [animatedCount, setAnimatedCount] = useState(0);
-
-  const sites = [
-    { name: 'CEHD', url: 'https://cehd.umn.edu/jsonapi/node/person', contentType: 'person' },
-    { name: 'CAREI', url: 'https://carei.umn.edu/jsonapi/node/person', contentType: 'person' },
-    { name: 'CI', url: 'https://ci.umn.edu/jsonapi/node/person', contentType: 'person' },
-    { name: 'EDPSYCH', url: 'https://edpsych.umn.edu/jsonapi/node/person', contentType: 'person' },
-    { name: 'FSOS', url: 'https://fsos.umn.edu/jsonapi/node/person', contentType: 'person' },
-    { name: 'ICD', url: 'https://icd.umn.edu/jsonapi/node/person', contentType: 'person' },
-    { name: 'KIN', url: 'https://kin.umn.edu/jsonapi/node/person', contentType: 'person' },
-    { name: 'OLPD', url: 'https://olpd.umn.edu/jsonapi/node/person', contentType: 'person' },
-    { name: 'SSW', url: 'https://ssw.umn.edu/jsonapi/node/person', contentType: 'person' },
-  ];
-
-  const fetchSite = async (site, initial = false) => {
-    const fetchData = async (url, accumulatedData = [], initial) => {
-      try {
-        const response = await axios.get('/api/proxy', { params: { url } });
-        const data = response.data.data.map(person => ({ ...person, department: site.name }));
-        const allData = [...accumulatedData, ...data];
-
-        console.log(`Fetched ${data.length} records from ${site.name}. Total so far: ${allData.length}`);
-
-        if (initial) {
-          return allData;
-        }
-
-        const nextLink = response.data.links?.next?.href;
-        if (nextLink) {
-          console.log(`Next link found for ${site.name}: ${nextLink}`);
-          return fetchData(nextLink, allData);
-        } else {
-          console.log(`No next link found for ${site.name}. Total records fetched: ${allData.length}`);
-          return allData;
-        }
-      } catch (error) {
-        console.error(`Error fetching data from ${site.name}:`, error);
-        return accumulatedData;
-      }
-    };
-
-    const initialUrl = `${site.url}?page[limit]=100`;
-    return fetchData(initialUrl, [], initial);
-  };
-
-  const fetchPersonTypes = async (site) => {
-    try {
-      const url = `${site.url.split('/jsonapi')[0]}/jsonapi/taxonomy_term/person_type`;
-      const response = await axios.get('/api/proxy', { params: { url } });
-      const types = {};
-
-      // Fetch details for each person type ID
-      await Promise.all(response.data.data.map(async (type) => {
-        const typeId = type.id;
-        const typeUrl = `${site.url.split('/jsonapi')[0]}/jsonapi/taxonomy_term/person_type/${typeId}`;
-        const typeResponse = await axios.get('/api/proxy', { params: { url: typeUrl } });
-        types[typeId] = typeResponse.data.data.attributes.name;
-      }));
-
-      return types;
-    } catch (error) {
-      console.error(`Error fetching person types from ${site.name}:`, error);
-      return {};
-    }
-  };
-
-  useEffect(() => {
-    const fetchInitialContent = async () => {
-      try {
-        const cehdSite = sites.find(site => site.name === 'CEHD');
-        const [cehdPeople, cehdPersonTypes] = await Promise.all([
-          fetchSite(cehdSite), // Fetch initial data recursively
-          fetchPersonTypes(cehdSite)
-        ]);
-
-        setPeople(cehdPeople);
-        setFilteredPeople(cehdPeople);
-        setPersonTypeMap(prevMap => ({ ...prevMap, ...cehdPersonTypes }));
-        setLoading(false);
-
-        // Fetch the rest of the sites one by one
-        await fetchRemainingContent(cehdPeople, cehdPersonTypes);
-      } catch (e) {
-        console.error('An error occurred while fetching the content:', e);
-        setError('Failed to fetch content. Please try again later.');
-        setLoading(false);
-      }
-    };
-
-    const fetchRemainingContent = async (initialPeople, initialPersonTypes) => {
-      try {
-        setLoadingMore(true);
-        const otherSites = sites.filter(site => site.name !== 'CEHD');
-
-        for (const site of otherSites) {
-          const [sitePeople, sitePersonTypes] = await Promise.all([
-            fetchSite(site),
-            fetchPersonTypes(site)
-          ]);
-
-          setPersonTypeMap(prevMap => ({ ...prevMap, ...sitePersonTypes }));
-          const allPeople = [...initialPeople, ...sitePeople];
-          setPeople(allPeople);
-          setFilteredPeople(allPeople);
-          initialPeople = allPeople; // Update initialPeople for the next iteration
-        }
-
-        setLoadingMore(false);
-      } catch (e) {
-        console.error('An error occurred while fetching the remaining content:', e);
-        setError('Failed to fetch remaining content. Please try again later.');
-        setLoadingMore(false);
-      }
-    };
-
-    fetchInitialContent();
-  }, []);
 
   useEffect(() => {
     const applyFilters = () => {
       let result = people;
-      if (filters.category) {
-        result = result.filter(person => {
-          const typeId = person.relationships.field_person_type.data[0]?.id;
-          return personTypeMap[typeId] === filters.category;
-        });
-      }
       if (filters.search) {
         const searchTerm = filters.search.toLowerCase();
         result = result.filter(person => 
@@ -162,14 +38,14 @@ export default function DirectoryPage() {
     };
 
     applyFilters();
-  }, [people, filters, personTypeMap]);
+  }, [people, filters]);
 
   useEffect(() => {
     let start = animatedCount;
     const end = filteredPeople.length;
     if (start === end) return;
 
-    const duration = 500; // duration of the animation in ms
+    const duration = 300; // Faster duration of the animation in ms
     const increment = end > start ? 1 : -1;
     const stepTime = Math.abs(Math.floor(duration / (end - start)));
 
@@ -186,9 +62,15 @@ export default function DirectoryPage() {
     const { name, value } = e.target;
     setFilters(prev => ({
       ...prev,
-      [name]: value,
-      ...(name === 'department' && { category: '' }) // Reset category if department changes
+      [name]: value
     }));
+
+    if (name === 'department') {
+      const container = document.querySelector('.people-container');
+      if (container) {
+        container.scrollTop = 0; // Scroll the container to the top
+      }
+    }
   };
 
   useEffect(() => {
@@ -200,42 +82,15 @@ export default function DirectoryPage() {
       {isClient && (
 <section className="">
 
-{/* <div className="relative w-full h-[1120px] bg-[#FFDE79]">
-    <video
-      className="absolute top-0 left-0 w-full h-full object-cover"
-      src="https://player.vimeo.com/progressive_redirect/playback/970909944/rendition/1080p/file.mp4?loc=external&signature=491f6a5e397a0adf16f1f82a2b211a482a98718e86fd379ef647b7ba60afd439"
-      autoPlay
-      loop
-      muted
-    ></video>
-</div> */}
-
-{/* <div className="w-full h-full p-8 font-['Open_Sans',_sans-serif] flex flex-col  h-[2470px]"> */}
 <div className="w-full h-full p-10 pt-20 flex flex-col  h-[2470px]">
             
             <Link href="/" className="bg-[#7a0019] text-white text-md px-4 py-1 w-full md:max-w-[175px] mb-6 text-white transform transition-transform hover:scale-105 active:scale-95 no-underline">
               &larr; Back to Home
             </Link>
 
-          <h1 className="text-7xl font-black text-[#7a0019] mb-16">College Directory</h1>
+          <h1 className="text-7xl font-black text-[#7a0019] mb-8">College Directory</h1>
           
-          <form id="views-exposed-form-programs-block-1" className="bg-[#f0f0f0] p-4 mb-16 flex flex-wrap items-end">
-
-            {/* <div className="w-full lg:w-[450px] form-item lg:mr-4 my-4">
-              <label htmlFor="search" className="block text-sm font-semibold mb-1">Search</label>
-              <input 
-                type="text"
-                id="search" 
-                name="search" 
-                className="h-14 w-full lg:max-w-[500px] p-3 border border-gray-300 "
-                onChange={(e) => {
-                  handleFilterChange(e);
-                  document.getElementById('pagetop').scrollIntoView({ behavior: 'smooth' });
-                }}
-                value={filters.search}
-                placeholder="Search directory..."
-              />
-            </div> */}
+          <form id="views-exposed-form-programs-block-1" className="bg-[#f0f0f0] p-4 mb-10 flex flex-wrap items-end">
 
             <div className="w-full lg:w-[350px] form-item lg:mr-4 my-4">
               <label htmlFor="department" className="block text-sm font-semibold mb-1">Department or Center</label>
@@ -244,10 +99,7 @@ export default function DirectoryPage() {
                 name="department" 
                 className="w-full h-14 w-64 p-3 border border-gray-300 text-lg" // Added text-lg for larger font size
                 style={{ position: 'relative', zIndex: 10 }} // Added style for better positioning
-                onChange={(e) => {
-                  handleFilterChange(e);
-                  document.getElementById('pagetop').scrollIntoView({ behavior: 'smooth' });
-                }}
+                onChange={handleFilterChange}
                 value={filters.department}
               >
                 <option value="">- Any -</option>
@@ -263,53 +115,26 @@ export default function DirectoryPage() {
               </select>
             </div>
 
-
-            {filters.department && (
-              <div className="w-full lg:w-[300px] form-item lg:mr-4 my-4">
-                <label htmlFor="category" className="block text-sm font-semibold mb-1">Categories</label>
-                <select 
-                  id="category" 
-                  name="category" 
-                  className="w-full h-14 w-64 p-3 border border-gray-300 text-lg" // Added text-lg for larger font size
-                  style={{ position: 'relative', zIndex: 10 }} // Added style for better positioning
-                  onChange={(e) => {
-                    handleFilterChange(e);
-                    document.getElementById('pagetop').scrollIntoView({ behavior: 'smooth' });
-                  }}
-                  value={filters.category}
-                >
-                  <option value="">- Any -</option>
-                  {Array.from(new Set(people
-                    .filter(person => person.department === filters.department)
-                    .map(person => {
-                      const typeId = person.relationships.field_person_type.data[0]?.id;
-                      return personTypeMap[typeId];
-                    })
-                  )).filter(Boolean).map((type, index) => (
-                    <option key={index} value={type}>{type}</option>
-                  ))}
-                </select>
-              </div>
-            )}
-            
-
             <button 
               type="button" 
               className="w-full lg:w-auto h-14 bg-[#7a0019] text-white my-4 px-6 py-2  hover:bg-[#5a0013] transition-colors text-lg"
               onClick={() => {
-                setFilters({ category: '', search: '', department: '' });
-                document.getElementById('pagetop').scrollIntoView({ behavior: 'smooth' });
+                setFilters({ search: '', department: '' });
+                const container = document.querySelector('.people-container');
+                if (container) {
+                  container.scrollTop = 0; // Scroll the container to the top
+                }
               }}
             >
               Reset
             </button>
 
-            <div className="w-full lg:w-auto ml-4 my-4 flex flex-col justify-center h-[50px] text-xl text-gray-600">
+            <div className="w-full lg:w-auto ml-4 my-4 flex flex-col justify-center h-[50px] text-xl text-gray-600 transition-all duration-300">
               {animatedCount} {animatedCount === 1 ? 'person' : 'people'} found
             </div>
           </form>
 
-          <div className="people-container flex-grow">
+          <div className="people-container flex-grow overflow-y-auto">
             {loading ? (
               <div className="text-center py-8">
                 <h2 className="text-2xl font-semibold mb-4">Loading Directory Data</h2>
@@ -322,10 +147,8 @@ export default function DirectoryPage() {
               </div>
             ) : (
               <>
-                <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 overflow-y-auto max-h-[2125px]">
+                <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-h-[2125px]">
                   {filteredPeople.map((person) => {
-                    const typeId = person.relationships.field_person_type.data[0]?.id;
-                    const category = personTypeMap[typeId] || 'Other';
                     return (
                       <li key={person.id}>
                       <Link href={person.attributes.metatag.find(meta => meta.attributes.property === "og:url")?.attributes.content} className="block border-2 bg-white hover:shadow-lg transition-shadow  overflow-hidden">
@@ -333,18 +156,16 @@ export default function DirectoryPage() {
                             <div className="col-span-1">
                               <img src={person.attributes.metatag.find(meta => meta.attributes.property === "og:image")?.attributes.content || '/default-profile-image.jpg'}
                                 alt={person.attributes.title} 
-                                className="w-full h-[250px] object-cover object-center "
+                                className="w-full h-full min-h-[260px] object-cover object-center "
                               />
                             </div>
-                            <div className="col-span-1 p-6 flex flex-col justify-between">
+                            <div className="col-span-1 p-4 flex flex-col justify-between">
                               <div> 
-                              <h2 className="text-lg font-bold text-[#7a0019] mb-2 break-words">{person.attributes.title}</h2>
-                              <p className="text-md font-light leading-tight text-[#333333] mb-2 break-words">{(person.attributes.field_person_working_title || person.attributes.field_person_wtitle)?.toLowerCase().replace(/\b\w/g, c => c.toUpperCase())}</p>
-                              {/* <p className="text-sm text-gray-600 mb-2 break-words">{person.attributes.field_email}</p>
-                              <p className="text-sm text-gray-600 mb-2 break-words">{person.attributes.field_phone}</p> */}
+                              <h2 className="text-md font-bold text-[#7a0019] mb-2 break-words">{person.attributes.title}</h2>
+                              <p className="text-sm font-light leading-tight text-[#333333] mb-2 break-words">{(person.attributes.field_person_working_title || person.attributes.field_person_wtitle)?.toLowerCase().replace(/\b\w/g, c => c.toUpperCase())}</p>
                               </div>
                               <div>
-                              <p className="text-sm text-gray-500 mt-4 break-words">{person.department} | {category}</p>
+                              <p className="text-sm text-gray-500 mt-4 break-words">{person.department}</p>
                               </div>
                             </div>
                           </div>
