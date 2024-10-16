@@ -103,7 +103,7 @@ const DeanListPage = () => {
   return (
     <PageTransition>
       <section>
-        <div className="relative w-full h-[1140px] bg-[#FFDE79]">
+        {/* <div className="relative w-full h-[1140px] bg-[#FFDE79]">
           <video
             className="absolute top-0 left-0 w-full h-full object-cover"
             src="https://player.vimeo.com/progressive_redirect/playback/970909944/rendition/1080p/file.mp4?loc=external&signature=491f6a5e397a0adf16f1f82a2b211a482a98718e86fd379ef647b7ba60afd439"
@@ -111,19 +111,19 @@ const DeanListPage = () => {
             loop
             muted
           ></video>
-        </div>
+        </div> */}
         <div id="pagetop" className="w-full h-full p-10 pt-20 flex flex-col h-[2470px]">
           <div className="bg-[#7a0019] text-white text-md px-4 py-1 w-full md:max-w-[175px] mb-6">
             <Link href="/" className="text-white hover:underline">
               &larr; Back to Home
             </Link>
           </div>
-          <h1 className="text-7xl font-black text-[#7a0019] mb-16">CEHD Dean&apos;s List</h1>
+          <h1 className="text-7xl font-black text-[#7a0019] mb-12">CEHD Dean&apos;s List</h1>
           <div className="">
             <h3 className="text-4xl font-bold mb-3">Congratulations to all students on the dean&#39;s list!</h3>
             <p className="text-2xl mb-16">Students on the dean&#39;s list have achieved a 3.666 GPA or higher, completed at least 12 A/F credits, and received no N grades.</p>
           </div>
-          <div className="flex mb-16">
+          {/* <div className="flex mb-16">
             <div className="bg-gray-200 w-full p-6 flex">
               <input
                 type="text"
@@ -140,9 +140,9 @@ const DeanListPage = () => {
                 Reset
               </button>
             </div>
-          </div>
-          <div className="flex overflow-y-auto h-[2000px] px-10">
-            <div className="sticky top-0 flex flex-col mr-4 flex-grow h-[2000px] max-w-20 overflow-y-auto">
+          </div> */}
+          <div className="flex overflow-y-auto h-[100%] px-10">
+            <div className="sticky top-0 flex flex-col mr-4 flex-grow max-w-20 overflow-y-auto">
               <ul className="flex flex-col w-full justify-end items-center p-4 gap-4 bg-[#ffde79]">
                 {'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').map((letter) => (
                   <li key={letter} className="flex flex-col items-center">
@@ -152,7 +152,7 @@ const DeanListPage = () => {
                         document.getElementById(`letter-${letter}`).scrollIntoView({ behavior: 'smooth' });
                         document.getElementById('pagetop').scrollIntoView({ behavior: 'smooth' });
                       }}
-                      className={`mb-1 text-5xl font-bold text=gray-700 ${highlightedLetter === letter ? 'text-[#7a0019]' : ''}`}
+                      className={` text-4xl font-bold bg-[#ffde79] text=gray-700 ${highlightedLetter === letter ? 'text-[#7a0019]' : ''}`}
                     >
                       {letter}
                     </button>
@@ -172,13 +172,13 @@ const DeanListPage = () => {
               {filteredAlphabet.map((letter) => (
                 <div key={letter} id={`letter-${letter}`} className="mb-4">
                   <h2 id={`header-${letter}`} className="text-3xl font-bold mb-6 bg-white sticky top- text-[#7a0019]">{letter}</h2>
-                  <ul className="grid grid-cols-4 gap-4">
+                  <ul className="grid grid-cols-3 gap-4">
                     {filteredData
                       .filter(({ name }) => name.startsWith(letter))
                       .map(({ name }, index) => (
                         <li
                           key={index}
-                          className={`border p-4 h-16 flex text-2xl items-center justify-center rounded-lg cursor-pointer ${
+                          className={`border p-4 h-16 flex text-xl items-center justify-center rounded-lg cursor-pointer ${
                             highlightedLetter === letter ? 'bg-gray-200' : 'bg-white'
                           }`}
                           onClick={resetInactivityTimeout}

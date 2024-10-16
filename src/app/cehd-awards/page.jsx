@@ -51,7 +51,7 @@ const CEHDAwardsPage = () => {
   return (
     <PageTransition>
       <section>
-        <div className="relative w-full h-[1140px] bg-[#FFDE79]">
+        {/* <div className="relative w-full h-[1140px] bg-[#FFDE79]">
           <video
             className="absolute top-0 left-0 w-full h-full object-cover"
             src="https://player.vimeo.com/progressive_redirect/playback/970909944/rendition/1080p/file.mp4?loc=external&signature=491f6a5e397a0adf16f1f82a2b211a482a98718e86fd379ef647b7ba60afd439"
@@ -59,7 +59,7 @@ const CEHDAwardsPage = () => {
             loop
             muted
           ></video>
-        </div>
+        </div> */}
         <div id="pagetop" className="w-full h-full p-10 pt-20 flex flex-col h-[2470px]">
           <div className="bg-[#7a0019] text-white text-md px-4 py-1 w-full md:max-w-[175px] mb-6">
             <Link href="/" className="text-white hover:underline">

@@ -70,7 +70,7 @@ const HomePage = () => {
         <main>
           {/* <div className="grid grid-cols-2 gap-10 p-12 h-[1020px] p-10"> */}
           
-          <section className="grid grid-cols-2 gap-10 p-12 h-[1275px] p-10">
+          <section className="grid grid-cols-2 gap-10 p-12 h-[950px] p-10">
           <div className="w-full h-full">
               <div className="relative w-full h-[100%]" style={{ backgroundImage: `url('https://connect.cehd.umn.edu/sites/connect/files/styles/coh_x_large_super_landscape/public/2024-05/Feat1_Splash_f22-1024x512.jpg?h=d28b8abe&itok=sA_qum5U')`, backgroundSize: 'cover', backgroundPosition: 'top right' }}>
                   <Link key="1" href="/directory/" passHref className=" ">
@@ -142,7 +142,7 @@ const HomePage = () => {
             </div> */}
 
               {/* <div className="grid grid-cols-2 gap-10 p-10 h-[920px]"> */}
-              <section className="grid grid-cols-2 gap-10 p-10 h-[1175px]">
+              <section className="grid grid-cols-2 gap-10 p-10 h-[950px]">
               <div className="w-full h-full -10">
                 {/* <div className="relative w-full h-[47%]" style={{ backgroundImage: `url('https://www.cehd.umn.edu/sites/cehd/files/styles/coh_x_large/public/2024-06/2022_CEHD%20Commencement_NicoleNeri_001.jpg?itok=3CIk2jmR')`, backgroundSize: 'cover', backgroundPosition: 'center center' }}>
                   <Link key="2" href="https://www.cehd.umn.edu/about" passHref className=" ">
