@@ -34,7 +34,6 @@ export default function DirectoryPage() {
         result = result.filter(person => person.department.toLowerCase() === filters.department.toLowerCase());
       }
       setFilteredPeople(result);
-      console.log(result)
     };
 
     applyFilters();
@@ -70,6 +69,14 @@ export default function DirectoryPage() {
       if (container) {
         container.scrollTop = 0; // Scroll the container to the top
       }
+    }
+  };
+
+  const handleReset = () => {
+    setFilters({ search: '', department: '' });
+    const container = document.querySelector('.people-container');
+    if (container) {
+      container.scrollTop = 0; // Scroll the container to the top
     }
   };
 
@@ -118,13 +125,7 @@ export default function DirectoryPage() {
             <button 
               type="button" 
               className="w-full lg:w-auto h-14 bg-[#7a0019] text-white my-4 px-6 py-2  hover:bg-[#5a0013] transition-colors text-lg"
-              onClick={() => {
-                setFilters({ search: '', department: '' });
-                const container = document.querySelector('.people-container');
-                if (container) {
-                  container.scrollTop = 0; // Scroll the container to the top
-                }
-              }}
+              onClick={handleReset}
             >
               Reset
             </button>
