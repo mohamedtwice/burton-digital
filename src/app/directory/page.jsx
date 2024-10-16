@@ -200,7 +200,7 @@ export default function DirectoryPage() {
       {isClient && (
 <section className="">
 
-<div className="relative w-full h-[1120px] bg-[#FFDE79]">
+{/* <div className="relative w-full h-[1120px] bg-[#FFDE79]">
     <video
       className="absolute top-0 left-0 w-full h-full object-cover"
       src="https://player.vimeo.com/progressive_redirect/playback/970909944/rendition/1080p/file.mp4?loc=external&signature=491f6a5e397a0adf16f1f82a2b211a482a98718e86fd379ef647b7ba60afd439"
@@ -208,7 +208,7 @@ export default function DirectoryPage() {
       loop
       muted
     ></video>
-</div>
+</div> */}
 
 {/* <div className="w-full h-full p-8 font-['Open_Sans',_sans-serif] flex flex-col  h-[2470px]"> */}
 <div className="w-full h-full p-10 pt-20 flex flex-col  h-[2470px]">
@@ -322,7 +322,7 @@ export default function DirectoryPage() {
               </div>
             ) : (
               <>
-                <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 overflow-y-auto max-h-[2125px]">
+                <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 overflow-y-auto max-h-[2125px]">
                   {filteredPeople.map((person) => {
                     const typeId = person.relationships.field_person_type.data[0]?.id;
                     const category = personTypeMap[typeId] || 'Other';

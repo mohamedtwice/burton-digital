@@ -83,6 +83,7 @@ const CEHDAwardsPage = () => {
                 onChange={handleSearchChange}
                 value={filters.search}
                 placeholder="Search awards..."
+                onFocus={(e) => e.target.setAttribute('inputmode', 'text')}
               />
             </div>
 
@@ -119,7 +120,7 @@ const CEHDAwardsPage = () => {
           </form>
 
           <div className="people-container flex-grow">
-            <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 overflow-y-auto max-h-[2125px]">
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-8 overflow-y-auto max-h-[2125px]">
               {filteredAwards.map((award, index) => (
                 <li key={index}>
                   {award.Link ? (
