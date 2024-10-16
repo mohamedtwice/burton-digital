@@ -69,10 +69,10 @@ const CEHDAwardsPage = () => {
           <h1 className="text-6xl font-black text-[#7a0019] mb-8">CEHD Awards</h1>
           <div className="">
             <h3 className="text-2xl font-bold mb-3">Congratulations to our 2024 CEHD Faculty, Staff, and Student award-winners!</h3>
-            <p className="text-xl mb-10">The CEHD Awards and Honors program recognizes outstanding work in the college each year through a variety of awards. Award recipients are nominated by their peers and award winners are recognized at the annual college Spring Assembly.</p>
+            <p className="text-xl mb-8">The CEHD Awards and Honors program recognizes outstanding work in the college each year through a variety of awards. Award recipients are nominated by their peers and award winners are recognized at the annual college Spring Assembly.</p>
           </div>
 
-          <form className="bg-[#f0f0f0] p-4 mb-10 inline-flex flex-wrap items-end w-max	">
+          <form className="bg-[#f0f0f0] p-4 mb-8 inline-flex flex-wrap items-end w-max	">
             {/* <div className="w-full lg:w-[450px] form-item lg:mr-4 my-4">
               <label htmlFor="search" className="block text-sm font-semibold mb-1">Search</label>
               <input 
