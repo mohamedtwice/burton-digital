@@ -171,15 +171,15 @@ const DeanListPage = () => {
             <div ref={scrollContainerRef} className="flex-grow h-[2000px] overflow-y-auto">
               {filteredAlphabet.map((letter) => (
                 <div key={letter} id={`letter-${letter}`} className="mb-4">
-                  <h2 id={`header-${letter}`} className="text-2xl font-bold mb-6 bg-white sticky top- text-[#7a0019]">{letter}</h2>
+                  <h2 id={`header-${letter}`} className="text-2xl font-bold mb-6 bg-white sticky top-0 z-10 text-[#7a0019]">{letter}</h2>
                   <ul className="grid grid-cols-3 gap-4">
                     {filteredData
                       .filter(({ name }) => name.startsWith(letter))
                       .map(({ name }, index) => (
                         <li
                           key={index}
-                          className={`bg-[#f9f7f6] p-4 h-16 flex text-lg text-center items-center justify-center cursor-pointer ${
-                            highlightedLetter === letter ? 'bg-gray-200' : 'bg-white'
+                          className={` p-4 h-16 flex text-lg text-center items-center justify-center cursor-pointer ${
+                            highlightedLetter === letter ? 'bg-[#ffde7a]' : 'bg-[#f9f7f6]'
                           }`}
                           onClick={resetInactivityTimeout}
                         >
