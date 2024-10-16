@@ -66,13 +66,13 @@ const CEHDAwardsPage = () => {
               &larr; Back to Home
             </Link>
             
-          <h1 className="text-7xl font-black text-[#7a0019] mb-12">CEHD Awards</h1>
+          <h1 className="text-6xl font-black text-[#7a0019] mb-8">CEHD Awards</h1>
           <div className="">
-            <h3 className="text-4xl font-bold mb-3">Congratulations to our 2024 CEHD Faculty, Staff, and Student award-winners!</h3>
-            <p className="text-2xl mb-16">The CEHD Awards and Honors program recognizes outstanding work in the college each year through a variety of awards. Award recipients are nominated by their peers and award winners are recognized at the annual college Spring Assembly.</p>
+            <h3 className="text-2xl font-bold mb-3">Congratulations to our 2024 CEHD Faculty, Staff, and Student award-winners!</h3>
+            <p className="text-xl mb-10">The CEHD Awards and Honors program recognizes outstanding work in the college each year through a variety of awards. Award recipients are nominated by their peers and award winners are recognized at the annual college Spring Assembly.</p>
           </div>
 
-          <form className="bg-[#f0f0f0] p-4 mb-16 inline-flex flex-wrap items-end">
+          <form className="bg-[#f0f0f0] p-4 mb-10 inline-flex flex-wrap items-end w-max	">
             {/* <div className="w-full lg:w-[450px] form-item lg:mr-4 my-4">
               <label htmlFor="search" className="block text-sm font-semibold mb-1">Search</label>
               <input 
@@ -129,13 +129,13 @@ const CEHDAwardsPage = () => {
                         <div className="col-span-1">
                           <img src={award.Image || '/default-profile-image.jpg'}
                             alt={award.Name} 
-                            className="w-full h-[350px] object-cover object-center"
+                            className="w-full h-[250px] object-cover object-center"
                           />
                         </div>
-                        <div className="col-span-1 p-6 flex flex-col justify-between">
+                        <div className="col-span-1 p-4 flex flex-col justify-between">
                           <div>
-                            <h2 className="text-xl font-bold text-[#7a0019] mb-2">{award.Name}</h2>
-                            <p className="text-lg text-gray-600 mb-2">{award.Award}</p>
+                            <h2 className="text-lg font-bold text-[#7a0019] mb-2">{award.Name}</h2>
+                            <p className="text-sm text-gray-600 mb-2">{award.Award}</p>
                           </div>
                           <div>
                             <p className="text-sm text-gray-500 mt-4">{award.Department}</p>
@@ -149,13 +149,13 @@ const CEHDAwardsPage = () => {
                         <div className="col-span-1">
                           <img src={award.Image || '/default-profile-image.jpg'}
                             alt={award.Name} 
-                            className="w-full h-[350px] object-cover object-center"
+                            className="w-full h-[250px] object-cover object-center"
                           />
                         </div>
                         <div className="col-span-1 p-6 flex flex-col justify-between">
                           <div>
-                            <h2 className="text-3xl font-bold text-[#7a0019] mb-2">{award.Name}</h2>
-                            <p className="text-2xl text-gray-600 mb-2">{award.Award}</p>
+                            <h2 className="text-lg font-bold text-[#7a0019] mb-2">{award.Name}</h2>
+                            <p className="text-sm text-gray-600 mb-2">{award.Award}</p>
                           </div>
                           <div>
                             <p className="text-sm text-gray-500 mt-4">{award.Department}</p>
