@@ -16,7 +16,6 @@ export default function DirectoryPage() {
     department: ''
   });
   const [isClient, setIsClient] = useState(false);
-  const [animatedCount, setAnimatedCount] = useState(peopleData.length);
 
   useEffect(() => {
     const applyFilters = () => {
@@ -39,24 +38,6 @@ export default function DirectoryPage() {
     applyFilters();
   }, [people, filters]);
 
-  useEffect(() => {
-    let start = animatedCount;
-    const end = filteredPeople.length;
-    if (start === end) return;
-
-    const duration = 50; // Twice as fast duration of the animation in ms
-    const increment = end > start ? 1 : -1;
-    const stepTime = Math.abs(Math.floor(duration / (end - start)));
-
-    const timer = setInterval(() => {
-      start += increment;
-      setAnimatedCount(start);
-      if (start === end) clearInterval(timer);
-    }, stepTime);
-
-    return () => clearInterval(timer);
-  }, [filteredPeople.length]);
-
   const handleFilterChange = (e) => {
     const { name, value } = e.target;
     setFilters(prev => ({
@@ -74,7 +55,6 @@ export default function DirectoryPage() {
 
   const handleReset = () => {
     setFilters({ search: '', department: '' });
-    setAnimatedCount(people.length); // Set count directly without animation
     const container = document.querySelector('.people-container');
     if (container) {
       container.scrollTop = 0; // Scroll the container to the top
@@ -98,7 +78,7 @@ export default function DirectoryPage() {
 
           <h1 className="text-7xl font-black text-[#7a0019] mb-8">College Directory</h1>
           
-          <form id="views-exposed-form-programs-block-1" className="bg-[#f0f0f0] p-4 mb-10 flex flex-wrap items-end">
+          <form id="views-exposed-form-programs-block-1" className="bg-[#f0f0f0] py-2 px-8 mb-10 flex flex-wrap items-end w-max">
 
             <div className="w-full lg:w-[350px] form-item lg:mr-4 my-4">
               <label htmlFor="department" className="block text-sm font-semibold mb-1">Department or Center</label>
@@ -132,7 +112,7 @@ export default function DirectoryPage() {
             </button>
 
             <div className="w-full lg:w-auto ml-4 my-4 flex flex-col justify-center h-[50px] text-xl text-gray-600 transition-all duration-300">
-              {animatedCount} {animatedCount === 1 ? 'person' : 'people'} found
+              {filteredPeople.length} {filteredPeople.length === 1 ? 'person' : 'people'} found
             </div>
           </form>
 
