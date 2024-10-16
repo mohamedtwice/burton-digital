@@ -212,16 +212,16 @@ export default function DirectoryPage() {
 
 {/* <div className="w-full h-full p-8 font-['Open_Sans',_sans-serif] flex flex-col  h-[2470px]"> */}
 <div className="w-full h-full p-10 pt-20 flex flex-col  h-[2470px]">
-<div className="bg-[#7a0019] text-white text-md px-4 py-1 w-full md:max-w-[175px] mb-6">
-            <Link href="/" className="text-white hover:underline">
+            
+            <Link href="/" className="bg-[#7a0019] text-white text-md px-4 py-1 w-full md:max-w-[175px] mb-6 text-white transform transition-transform hover:scale-105 active:scale-95 no-underline">
               &larr; Back to Home
             </Link>
-          </div>
+
           <h1 className="text-7xl font-black text-[#7a0019] mb-16">College Directory</h1>
           
           <form id="views-exposed-form-programs-block-1" className="bg-[#f0f0f0] p-4 mb-16 flex flex-wrap items-end">
 
-            <div className="w-full lg:w-[450px] form-item lg:mr-4 my-4">
+            {/* <div className="w-full lg:w-[450px] form-item lg:mr-4 my-4">
               <label htmlFor="search" className="block text-sm font-semibold mb-1">Search</label>
               <input 
                 type="text"
@@ -235,7 +235,7 @@ export default function DirectoryPage() {
                 value={filters.search}
                 placeholder="Search directory..."
               />
-            </div>
+            </div> */}
 
             <div className="w-full lg:w-[350px] form-item lg:mr-4 my-4">
               <label htmlFor="department" className="block text-sm font-semibold mb-1">Department or Center</label>

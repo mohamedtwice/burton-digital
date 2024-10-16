@@ -113,11 +113,11 @@ const DeanListPage = () => {
           ></video>
         </div> */}
         <div id="pagetop" className="w-full h-full p-10 pt-20 flex flex-col h-[2470px]">
-          <div className="bg-[#7a0019] text-white text-md px-4 py-1 w-full md:max-w-[175px] mb-6">
-            <Link href="/" className="text-white hover:underline">
+            
+            <Link href="/" className="bg-[#7a0019] text-white text-md px-4 py-1 w-full md:max-w-[175px] mb-6 text-white transform transition-transform hover:scale-105 active:scale-95 no-underline">
               &larr; Back to Home
             </Link>
-          </div>
+            
           <h1 className="text-7xl font-black text-[#7a0019] mb-12">CEHD Dean&apos;s List</h1>
           <div className="">
             <h3 className="text-4xl font-bold mb-3">Congratulations to all students on the dean&#39;s list!</h3>
