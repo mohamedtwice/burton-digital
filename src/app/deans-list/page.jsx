@@ -61,10 +61,10 @@ const DeanListPage = () => {
     if (scrollContainerRef.current) {
       scrollIntervalRef.current = setInterval(() => {
         scrollContainerRef.current.scrollBy({
-          top: 1,
+          top: 15, // Increase the scroll amount for faster scrolling
           behavior: 'smooth',
         });
-      }, 20);
+      }, 5); // Decrease the interval time for faster scrolling
     }
   };
 
