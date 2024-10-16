@@ -113,7 +113,7 @@ const HomePage = () => {
                 <div className="relative w-full h-[10%] py-10">
                 <Link key="7" href="https://campusmaps.umn.edu/" passHref className="">
                   <MotionDiv
-                    className={`text-[#FFDE79] border-l-8 border-[#FFDE79] p-6 text-lg font-bold bg-[#7a0019] cursor-pointer w-full h-[10%] inline-flex flex-row items-center w-auto`}
+                    className={`text-[#FFDE79] border-l-8 border-[#FFDE79] p-6 text-md font-bold bg-[#7a0019] cursor-pointer w-full h-[10%] inline-flex flex-row items-center w-auto`}
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
