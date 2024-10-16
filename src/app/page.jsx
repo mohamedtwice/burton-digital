@@ -87,28 +87,31 @@ const HomePage = () => {
               </div>
               <div className="w-full h-full py-10">
                 <div className="relative w-full h-[43%]" style={{ backgroundImage: `url('https://pts.umn.edu/sites/pts.umn.edu/files/2024-05/wbs_hero.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center center' }}>
-                  <Link key="2" href="https://z.umn.edu/GopherWay-Burton" passHref className=" ">
+                  <div className="absolute bottom-0 right-0 w-24 h-24 bg-white p-2" style={{ backgroundImage: `url('/images/z-GopherWay-Burton.svg')`, backgroundSize: 'cover', backgroundPosition: 'center center' }}></div>
+                  {/* <Link key="2" href="https://z.umn.edu/GopherWay-Burton" passHref className=" "> */}
                     <MotionDiv
                       className={`flex flex-col items-start justify-between cursor-pointer w-full h-full p-8`}
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                     >
-                      <h2 className="text-white text-4xl font-black" style={{ textShadow: '2px 2px 4px #7a0019' }}>Gopher Way</h2>
-                     <span className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-lg font-bold px-6 py-2 shadow-lg">Navigate the tunnels and skyways that connect our campus</span>
+                     <h2 className="text-white text-4xl font-black mb-6" style={{ textShadow: '2px 2px 4px #7a0019' }}>Gopher Way</h2>
+                     <span className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-lg font-bold px-6 py-2 shadow-lg w-[75%]">Navigate the tunnels and skyways that connect our campus</span>
                     </MotionDiv>
-                  </Link>
+                  {/* </Link> */}
+                  {/* <img src="/images/z-GopherWay-Burton.svg" alt="Overlay SVG" className="absolute bottom-0 right-0 w-16 h-16" /> */}
                 </div>
                 <div className="relative w-full h-[43%] mt-10" style={{ backgroundImage: `url('https://pts.umn.edu/sites/pts.umn.edu/files/2023-10/bus_banner.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center center' }}>
-                <Link key="3" href="https://z.umn.edu/Buildings-Burton" passHref className="">
+                <div className="absolute bottom-0 right-0 w-24 h-24 bg-white p-2" style={{ backgroundImage: `url('/images/z-Buildings-Burton.svg')`, backgroundSize: 'cover', backgroundPosition: 'center center' }}></div>
+                {/* <Link key="3" href="https://z.umn.edu/Buildings-Burton" passHref className=""> */}
                     <MotionDiv
                       className={`flex flex-col items-start justify-between cursor-pointer w-full h-full p-8`}
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                     >
                       <h2 className="text-white text-4xl font-black" style={{ textShadow: '2px 2px 4px #7a0019' }}>Campus Maps</h2>
-                     <span className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-lg font-bold px-6 py-2 shadow-lg">Find information about campus buildings</span>
+                     <span className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-lg font-bold px-6 py-2 shadow-lg w-[75%]">Find information about campus buildings</span>
                     </MotionDiv>
-                  </Link>
+                  {/* </Link> */}
                 </div>
                 <div className="relative w-full h-[10%] py-10">
                 <Link key="7" href="https://campusmaps.umn.edu/" passHref className="">
