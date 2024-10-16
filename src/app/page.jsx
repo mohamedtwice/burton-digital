@@ -105,8 +105,8 @@ const HomePage = () => {
                 {/* <Link key="3" href="https://z.umn.edu/Buildings-Burton" passHref className=""> */}
                     <MotionDiv
                       className={`flex flex-col items-start justify-between cursor-pointer w-full h-full p-8`}
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
+                      // whileHover={{ scale: 1.05 }}
+                      // whileTap={{ scale: 0.95 }}
                     >
                       <h2 className="text-white text-4xl font-black" style={{ textShadow: '2px 2px 4px #7a0019' }}>Campus Maps</h2>
                      <span className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-lg font-bold px-6 py-2 shadow-lg w-[75%]">Find information about campus buildings</span>
@@ -117,8 +117,8 @@ const HomePage = () => {
                 <Link key="7" href="https://campusmaps.umn.edu/" passHref className="">
                   <MotionDiv
                     className={`text-[#FFDE79] border-l-8 border-[#FFDE79] p-6 text-md font-bold bg-[#7a0019] cursor-pointer w-full h-[10%] inline-flex flex-row items-center w-auto`}
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
+                    // whileHover={{ scale: 1.05 }}
+                    // whileTap={{ scale: 0.95 }}
                   >
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mt-1 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3l7 7-7 7M21 3l-7 7 7 7" />
