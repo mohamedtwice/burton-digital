@@ -171,7 +171,7 @@ const DeanListPage = () => {
             <div ref={scrollContainerRef} className="flex-grow h-[2000px] overflow-y-auto">
               {filteredAlphabet.map((letter) => (
                 <div key={letter} id={`letter-${letter}`} className="mb-4">
-                  <h2 id={`header-${letter}`} className="text-3xl font-bold mb-6 bg-white sticky top- text-[#7a0019]">{letter}</h2>
+                  <h2 id={`header-${letter}`} className="text-2xl font-bold mb-6 bg-white sticky top- text-[#7a0019]">{letter}</h2>
                   <ul className="grid grid-cols-3 gap-4">
                     {filteredData
                       .filter(({ name }) => name.startsWith(letter))

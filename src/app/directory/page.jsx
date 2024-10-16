@@ -322,7 +322,7 @@ export default function DirectoryPage() {
               </div>
             ) : (
               <>
-                <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 overflow-y-auto max-h-[2125px]">
+                <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 overflow-y-auto max-h-[2125px]">
                   {filteredPeople.map((person) => {
                     const typeId = person.relationships.field_person_type.data[0]?.id;
                     const category = personTypeMap[typeId] || 'Other';
@@ -338,10 +338,10 @@ export default function DirectoryPage() {
                             </div>
                             <div className="col-span-1 p-6 flex flex-col justify-between">
                               <div> 
-                              <h2 className="text-3xl font-bold text-[#7a0019] mb-2 break-words">{person.attributes.title}</h2>
-                              <p className="text-xl font-light leading-tight text-[#333333] mb-2 break-words">{(person.attributes.field_person_working_title || person.attributes.field_person_wtitle)?.toLowerCase().replace(/\b\w/g, c => c.toUpperCase())}</p>
-                              <p className="text-lg text-gray-600 mb-2 break-words">{person.attributes.field_email}</p>
-                              <p className="text-lg text-gray-600 mb-2 break-words">{person.attributes.field_phone}</p>
+                              <h2 className="text-lg font-bold text-[#7a0019] mb-2 break-words">{person.attributes.title}</h2>
+                              <p className="text-md font-light leading-tight text-[#333333] mb-2 break-words">{(person.attributes.field_person_working_title || person.attributes.field_person_wtitle)?.toLowerCase().replace(/\b\w/g, c => c.toUpperCase())}</p>
+                              <p className="text-sm text-gray-600 mb-2 break-words">{person.attributes.field_email}</p>
+                              <p className="text-sm text-gray-600 mb-2 break-words">{person.attributes.field_phone}</p>
                               </div>
                               <div>
                               <p className="text-sm text-gray-500 mt-4 break-words">{person.department} | {category}</p>

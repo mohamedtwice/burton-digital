@@ -94,7 +94,7 @@ const HomePage = () => {
                       whileTap={{ scale: 0.95 }}
                     >
                       <h2 className="text-white text-4xl font-black" style={{ textShadow: '2px 2px 4px #7a0019' }}>Gopher Way</h2>
-                     <span className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-xl font-bold px-6 py-2 shadow-lg">Navigate the tunnels and skyways that connect our campus</span>
+                     <span className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-lg font-bold px-6 py-2 shadow-lg">Navigate the tunnels and skyways that connect our campus</span>
                     </MotionDiv>
                   </Link>
                 </div>
@@ -106,7 +106,7 @@ const HomePage = () => {
                       whileTap={{ scale: 0.95 }}
                     >
                       <h2 className="text-white text-4xl font-black" style={{ textShadow: '2px 2px 4px #7a0019' }}>Campus Maps</h2>
-                     <span className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-xl font-bold px-6 py-2 shadow-lg">Find information about campus buildings</span>
+                     <span className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-lg font-bold px-6 py-2 shadow-lg">Find information about campus buildings</span>
                     </MotionDiv>
                   </Link>
                 </div>
@@ -164,7 +164,7 @@ const HomePage = () => {
                       whileTap={{ scale: 0.95 }}
                     >
                       <h2 className="text-white text-4xl font-black" style={{ textShadow: '2px 2px 4px #7a0019' }}>CEHD Awards</h2>
-                     <span className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-xl font-bold px-6 py-2 shadow-lg">Learn about outstanding work in the college</span>
+                     <span className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-lg font-bold px-6 py-2 shadow-lg">Learn about outstanding work in the college</span>
                     </MotionDiv>
                   </Link>
                 </div>
@@ -180,7 +180,7 @@ const HomePage = () => {
                       whileTap={{ scale: 0.95 }}
                     >
                       <h2 className="text-white text-4xl font-black" style={{ textShadow: '2px 2px 4px #7a0019' }}>CEHD Dean&apos;s List</h2>
-                     <span className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-xl font-bold px-6 py-2 shadow-lg">Congratulations to our scholars on the list</span>
+                     <span className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-lg font-bold px-6 py-2 shadow-lg">Congratulations to our scholars on the list</span>
                     </MotionDiv>
                   </Link>
                 </div>

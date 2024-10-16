@@ -72,8 +72,8 @@ const CEHDAwardsPage = () => {
             <p className="text-2xl mb-16">The CEHD Awards and Honors program recognizes outstanding work in the college each year through a variety of awards. Award recipients are nominated by their peers and award winners are recognized at the annual college Spring Assembly.</p>
           </div>
 
-          <form className="bg-[#f0f0f0] p-4 mb-16 flex flex-wrap items-end">
-            <div className="w-full lg:w-[450px] form-item lg:mr-4 my-4">
+          <form className="bg-[#f0f0f0] p-4 mb-16 inline-flex flex-wrap items-end">
+            {/* <div className="w-full lg:w-[450px] form-item lg:mr-4 my-4">
               <label htmlFor="search" className="block text-sm font-semibold mb-1">Search</label>
               <input 
                 type="text"
@@ -85,7 +85,7 @@ const CEHDAwardsPage = () => {
                 placeholder="Search awards..."
                 onFocus={(e) => e.target.setAttribute('inputmode', 'text')}
               />
-            </div>
+            </div> */}
 
             <div className="w-full lg:w-[350px] form-item lg:mr-4 my-4">
               <label htmlFor="department" className="block text-sm font-semibold mb-1">Department</label>
@@ -114,13 +114,13 @@ const CEHDAwardsPage = () => {
               Reset
             </button>
 
-            <div className="w-full lg:w-auto ml-4 my-4 flex flex-col justify-center h-[50px] text-xl text-gray-600">
-              {filteredAwards.length} {filteredAwards.length === 1 ? 'award' : 'awards'} found
+            <div className="w-full lg:w-auto ml-4 my-4 flex flex-col justify-center h-[50px] text-md text-gray-600">
+              {filteredAwards.length} {filteredAwards.length === 1 ? 'awardee' : 'awardees'} found
             </div>
           </form>
 
           <div className="people-container flex-grow">
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-8 overflow-y-auto max-h-[2125px]">
+            <ul className="grid grid-cols-1 md:grid-cols-3 gap-4 overflow-y-auto max-h-[2125px]">
               {filteredAwards.map((award, index) => (
                 <li key={index}>
                   {award.Link ? (
@@ -134,8 +134,8 @@ const CEHDAwardsPage = () => {
                         </div>
                         <div className="col-span-1 p-6 flex flex-col justify-between">
                           <div>
-                            <h2 className="text-3xl font-bold text-[#7a0019] mb-2">{award.Name}</h2>
-                            <p className="text-2xl text-gray-600 mb-2">{award.Award}</p>
+                            <h2 className="text-xl font-bold text-[#7a0019] mb-2">{award.Name}</h2>
+                            <p className="text-lg text-gray-600 mb-2">{award.Award}</p>
                           </div>
                           <div>
                             <p className="text-sm text-gray-500 mt-4">{award.Department}</p>
