@@ -178,7 +178,7 @@ const DeanListPage = () => {
                       .map(({ name }, index) => (
                         <li
                           key={index}
-                          className={`border p-4 h-16 flex text-lg text-center items-center justify-center rounded-lg cursor-pointer ${
+                          className={`bg-[#f9f7f6] p-4 h-16 flex text-lg text-center items-center justify-center cursor-pointer ${
                             highlightedLetter === letter ? 'bg-gray-200' : 'bg-white'
                           }`}
                           onClick={resetInactivityTimeout}

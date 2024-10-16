@@ -124,7 +124,7 @@ const CEHDAwardsPage = () => {
               {filteredAwards.map((award, index) => (
                 <li key={index}>
                   {award.Link ? (
-                    <Link href={award.Link} className="block border-2 bg-white hover:shadow-lg transition-shadow overflow-hidden">
+                    <Link href={award.Link} className="block border-0 bg-[#f9f7f6] hover:shadow-lg transition-shadow overflow-hidden">
                       <div className="grid grid-cols-2">
                         <div className="col-span-1">
                           <img src={award.Image || '/default-profile-image.jpg'}

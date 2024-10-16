@@ -133,7 +133,7 @@ export default function DirectoryPage() {
                   {filteredPeople.map((person) => {
                     return (
                       <li key={person.id}>
-                      <Link href={person.attributes.metatag.find(meta => meta.attributes.property === "og:url")?.attributes.content} className="block border-2 bg-white hover:shadow-lg transition-shadow  overflow-hidden">
+                      <Link href={person.attributes.metatag.find(meta => meta.attributes.property === "og:url")?.attributes.content} className="block border-0 bg-[#f9f7f6] hover:shadow-lg transition-shadow  overflow-hidden">
                       <div className="grid grid-cols-2 ">
                             <div className="col-span-1">
                               <img src={person.attributes.metatag.find(meta => meta.attributes.property === "og:image")?.attributes.content || '/default-profile-image.jpg'}
