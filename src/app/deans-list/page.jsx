@@ -118,10 +118,10 @@ const DeanListPage = () => {
               &larr; Back to Home
             </Link>
 
-          <h1 className="text-7xl font-black text-[#7a0019] mb-8">CEHD Dean&apos;s List</h1>
+          <h1 className="text-6xl font-black text-[#7a0019] mb-8">CEHD Dean&apos;s List</h1>
           <div className="">
-            <h3 className="text-4xl font-bold mb-3">Congratulations to all students on the dean&#39;s list!</h3>
-            <p className="text-2xl mb-16">Students on the dean&#39;s list have achieved a 3.666 GPA or higher, completed at least 12 A/F credits, and received no N grades.</p>
+            <h3 className="text-2xl font-bold mb-3">Congratulations to all students on the dean&#39;s list!</h3>
+            <p className="text-xl mb-16">Students on the dean&#39;s list have achieved a 3.666 GPA or higher, completed at least 12 A/F credits, and received no N grades.</p>
           </div>
           {/* <div className="flex mb-16">
             <div className="bg-gray-200 w-full p-6 flex">

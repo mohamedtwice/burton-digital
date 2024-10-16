@@ -76,7 +76,7 @@ export default function DirectoryPage() {
               &larr; Back to Home
             </Link>
 
-          <h1 className="text-7xl font-black text-[#7a0019] mb-8">College Directory</h1>
+          <h1 className="text-6xl font-black text-[#7a0019] mb-8">College Directory</h1>
           
           <form id="views-exposed-form-programs-block-1" className="bg-[#f0f0f0] py-2 px-8 mb-10 flex flex-wrap items-end w-max">
 

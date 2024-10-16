@@ -95,7 +95,7 @@ const HomePage = () => {
                       whileTap={{ scale: 0.95 }}
                     >
                      <h2 className="text-white text-4xl font-black mb-6" style={{ textShadow: '2px 2px 4px #7a0019' }}>Gopher Way</h2>
-                     <span className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-lg font-bold px-6 py-2 shadow-lg w-[75%]">Navigate the tunnels and skyways that connect our campus</span>
+                     <span className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-md font-bold px-6 py-2 shadow-lg w-[75%]">Navigate the tunnels and skyways that connect our campus</span>
                     </MotionDiv>
                   {/* </Link> */}
                   {/* <img src="/images/z-GopherWay-Burton.svg" alt="Overlay SVG" className="absolute bottom-0 right-0 w-16 h-16" /> */}
@@ -109,18 +109,18 @@ const HomePage = () => {
                       // whileTap={{ scale: 0.95 }}
                     >
                       <h2 className="text-white text-4xl font-black" style={{ textShadow: '2px 2px 4px #7a0019' }}>Campus Maps</h2>
-                     <span className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-lg font-bold px-6 py-2 shadow-lg w-[75%]">Find information about campus buildings</span>
+                     <span className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-md font-bold px-6 py-2 shadow-lg w-[75%]">Find information about campus buildings</span>
                     </MotionDiv>
                   {/* </Link> */}
                 </div>
                 <div className="relative w-full h-[10%] py-10">
                 <Link key="7" href="https://campusmaps.umn.edu/" passHref className="">
                   <MotionDiv
-                    className={`text-[#FFDE79] border-l-8 border-[#FFDE79] p-6 text-md font-bold bg-[#7a0019] cursor-pointer w-full h-[10%] inline-flex flex-row items-center w-auto`}
+                    className={`text-[#FFDE79] border-l-8 border-[#FFDE79] p-6 text-sm font-bold bg-[#7a0019] cursor-pointer w-full h-[10%] inline-flex flex-row items-center w-auto`}
                     // whileHover={{ scale: 1.05 }}
                     // whileTap={{ scale: 0.95 }}
                   >
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mt-1 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mt-1 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3l7 7-7 7M21 3l-7 7 7 7" />
                     </svg>
                     Tap here for more campus map information.
@@ -167,7 +167,7 @@ const HomePage = () => {
                       whileTap={{ scale: 0.95 }}
                     >
                       <h2 className="text-white text-4xl font-black" style={{ textShadow: '2px 2px 4px #7a0019' }}>CEHD Awards</h2>
-                     <span className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-lg font-bold px-6 py-2 shadow-lg">Learn about outstanding work in the college</span>
+                     <span className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-md font-bold px-6 py-2 shadow-lg">Learn about outstanding work in the college</span>
                     </MotionDiv>
                   </Link>
                 </div>
@@ -183,7 +183,7 @@ const HomePage = () => {
                       whileTap={{ scale: 0.95 }}
                     >
                       <h2 className="text-white text-4xl font-black" style={{ textShadow: '2px 2px 4px #7a0019' }}>CEHD Dean&apos;s List</h2>
-                     <span className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-lg font-bold px-6 py-2 shadow-lg">Congratulations to our scholars on the list</span>
+                     <span className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-md font-bold px-6 py-2 shadow-lg">Congratulations to our scholars on the list</span>
                     </MotionDiv>
                   </Link>
                 </div>
