@@ -7,7 +7,7 @@ import Image from 'next/image';
 import PageTransition from '@/components/PageTransition';
 import gopherWayImage from '../../public/images/gopher_way.jpg'
 import deanRodriguezImage from '../../public/images/DeanRodriguez.webp'
-import directoryImage from '../../public/images/Faculty_Splash_3.png'
+import directoryImage from '../../public/images/Faculty_Splash_2.webp'
 import VideoRotation from '@/components/VideoRotation';
 import VideoHome from '@/components/VideoHome';
 const MotionMain = dynamic(() => import('../components/MotionMain'), { ssr: false });

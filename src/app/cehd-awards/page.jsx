@@ -120,13 +120,14 @@ const CEHDAwardsPage = () => {
             </div>
           </form>
 
-          <div className="people-container flex-grow">
-            <ul className="grid grid-cols-1 md:grid-cols-3 gap-4 overflow-y-auto max-h-[2125px]">
+          <div className="people-container flex-grow overflow-y-auto">
+            <ul className="grid grid-cols-1 md:grid-cols-3 gap-4 overflow-y-auto max-h-[1000px]">
               {filteredAwards.map((award, index) => (
                 <li key={index}>
                   {award.Link ? (
-                    <Link href={award.Link} className="block border-0 bg-[#f9f7f6] hover:shadow-lg transition-shadow overflow-hidden">
-                      <div className="grid grid-cols-2">
+                    // <Link href={award.Link} className="block border-0 bg-[#f9f7f6] hover:shadow-lg transition-shadow overflow-hidden">
+                    <div className="block border-0 bg-[#f9f7f6] hover:shadow-lg transition-shadow overflow-hidden">
+                    <div className="grid grid-cols-2">
                         <div className="col-span-1">
                           <Image src={award.Image || '/default-profile-image.jpg'}
                             alt={award.Name} 
@@ -145,7 +146,7 @@ const CEHDAwardsPage = () => {
                           </div>
                         </div>
                       </div>
-                    </Link>
+                    </div>
                   ) : (
                     <div className="block border-2 bg-white hover:shadow-lg transition-shadow overflow-hidden">
                       <div className="grid grid-cols-2">
