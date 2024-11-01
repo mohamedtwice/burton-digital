@@ -70,7 +70,7 @@ const HomePage = () => {
         <main>
           {/* <div className="grid grid-cols-2 gap-10 p-12 h-[1020px] p-10"> */}
           
-          <section className="grid grid-cols-2 gap-10 p-12 p-10 h-[50%]">
+          <section className="grid grid-cols-2 gap-10 p-12 p-10 h-[1300px]">
           <div className="w-full h-full">
               <div className="relative w-full h-[100%]" style={{ backgroundImage: `url('https://connect.cehd.umn.edu/sites/connect/files/styles/coh_x_large_super_landscape/public/2024-05/Feat1_Splash_f22-1024x512.jpg?h=d28b8abe&itok=sA_qum5U')`, backgroundSize: 'cover', backgroundPosition: 'top right' }}>
                   <Link key="1" href="/directory/" passHref className=" ">
@@ -85,8 +85,8 @@ const HomePage = () => {
                   </Link>
                 </div>
               </div>
-              <div className="w-full h-full py-10">
-                <div className="relative w-full h-[45%] flex">
+              <div className="w-full h-[100%] flex flex-col gap-10">
+                <div className="relative w-full h-[50%] flex">
                   <div className="w-[70%] h-full" style={{ backgroundImage: `url('https://pts.umn.edu/sites/pts.umn.edu/files/2024-05/wbs_hero.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center center' }}>
                       <div className={`flex flex-col items-start justify-between cursor-pointer w-full h-full p-8`}>
                         <h2 className="text-white text-4xl font-black mb-6" style={{ textShadow: '2px 2px 4px #7a0019' }}>Gopher Way</h2>
@@ -98,7 +98,7 @@ const HomePage = () => {
                     <div className="w-24 h-24 bg-white p-2" style={{ backgroundImage: `url('/images/z-GopherWay-Burton.svg')`, backgroundSize: 'cover', backgroundPosition: 'center center' }}></div>
                   </div>
                 </div>
-                <div className="relative w-full h-[45%] mt-10 flex">
+                <div className="relative w-full h-[50%] flex">
                   <div className="w-[70%] h-full relative" style={{ backgroundImage: `url('https://pts.umn.edu/sites/pts.umn.edu/files/2023-10/bus_banner.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center center' }}>
                     <div className={`flex flex-col items-start justify-between cursor-pointer w-full h-full p-8`}>
                         <h2 className="text-white text-4xl font-black mb-6" style={{ textShadow: '2px 2px 4px #7a0019' }}>Gopher Way</h2>
@@ -144,7 +144,7 @@ const HomePage = () => {
             </div> */}
 
               {/* <div className="grid grid-cols-2 gap-10 p-10 h-[920px]"> */}
-              <section className="grid grid-cols-2 gap-10 p-10 h-[50%]">
+              <section className="grid grid-cols-2 gap-10 p-10 h-[1300px]">
               <div className="w-full ">
                 {/* <div className="relative w-full h-[47%]" style={{ backgroundImage: `url('https://www.cehd.umn.edu/sites/cehd/files/styles/coh_x_large/public/2024-06/2022_CEHD%20Commencement_NicoleNeri_001.jpg?itok=3CIk2jmR')`, backgroundSize: 'cover', backgroundPosition: 'center center' }}>
                   <Link key="2" href="https://www.cehd.umn.edu/about" passHref className=" ">

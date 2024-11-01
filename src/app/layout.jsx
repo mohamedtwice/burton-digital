@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
       <body className="bg-[#7a0019] font-sans min-h-screen flex justify-center items-center">
-        <div className="bg-white  mx-auto h-screen overflow-hidden ">
+        <div className="bg-white  mx-auto h-[2625px] overflow-hidden ">
           {children}
         </div>
       </body>
