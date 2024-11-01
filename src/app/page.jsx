@@ -2,7 +2,9 @@ import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import PageTransition from '@/components/PageTransition';
-import gopherWayImage from '../../public/images/gopher_way.jpg'
+import gopherWayImage from '../../public/images/wbs_hero.webp'
+import campusMapsImage from '../../public/images/bus_banner.webp'
+import cehdAwardsImage from '../../public/images/cehd-awards.webp'
 import deanRodriguezImage from '../../public/images/DeanRodriguez.webp'
 import directoryImage from '../../public/images/Faculty_Splash_f22.webp'
 const MotionMain = dynamic(() => import('../components/MotionMain'), { ssr: false });
@@ -51,7 +53,7 @@ const HomePage = () => {
               </div>
               <div className="w-full h-[100%] flex flex-col gap-8">
                 <div className="relative w-full h-[50%] flex">
-                  <div className="w-[70%] h-full" style={{ backgroundImage: `url('https://pts.umn.edu/sites/pts.umn.edu/files/2024-05/wbs_hero.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center center' }}>
+                  <div className="w-[70%] h-full" style={{ backgroundImage: `url(${gopherWayImage.src})`, backgroundSize: 'cover', backgroundPosition: 'center center' }}>
                       <div className={`flex flex-col items-start justify-between cursor-pointer w-full h-full p-8`}>
                         <h2 className="text-white text-4xl font-black mb-6" style={{ textShadow: '2px 2px 4px #7a0019' }}>Gopher Way</h2>
                         <span className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-md font-bold px-6 py-2 shadow-lg w-[95%]">Navigate the tunnels and skyways that connect our campus</span>
@@ -63,7 +65,7 @@ const HomePage = () => {
                   </div>
                 </div>
                 <div className="relative w-full h-[50%] flex">
-                  <div className="w-[70%] h-full relative" style={{ backgroundImage: `url('https://pts.umn.edu/sites/pts.umn.edu/files/2023-10/bus_banner.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center center' }}>
+                  <div className="w-[70%] h-full relative" style={{ backgroundImage: `url(${campusMapsImage.src})`, backgroundSize: 'cover', backgroundPosition: 'center center' }}>
                     <div className={`flex flex-col items-start justify-between cursor-pointer w-full h-full p-8`}>
                         <h2 className="text-white text-4xl font-black mb-6" style={{ textShadow: '2px 2px 4px #7a0019' }}>Campus Maps</h2>
                         <span className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-md font-bold px-6 py-2 shadow-lg w-[95%]">Find more information about campus buildings</span>
@@ -122,7 +124,7 @@ const HomePage = () => {
                     </MotionDiv>
                   </Link>
                 </div> */}
-                <div className="relative w-full h-[100%] -10" style={{ backgroundImage: `url('https://pbs.twimg.com/media/GY03trTXwAAHuM5?format=jpg&name=large')`, backgroundSize: 'cover', backgroundPosition: 'top center' }}>
+                <div className="relative w-full h-[100%] -10" style={{ backgroundImage: `url(${cehdAwardsImage.src})`, backgroundSize: 'cover', backgroundPosition: 'top center' }}>
                 <a key="3" href="/cehd-awards/" className="">
                     <MotionDiv
                       className={`flex flex-col items-start justify-between cursor-pointer w-full h-full p-8`}
