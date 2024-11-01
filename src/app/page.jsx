@@ -5,7 +5,7 @@ import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import PageTransition from '@/components/PageTransition';
 import gopherWayImage from '../../public/images/gopher_way.jpg'
-import deanRodriguezImage from '../../public/images/DeanRodriguez.jpg'
+import deanRodriguezImage from '../../public/images/DeanRodriguez.webp'
 import VideoRotation from '@/components/VideoRotation';
 import VideoHome from '@/components/VideoHome';
 const MotionMain = dynamic(() => import('../components/MotionMain'), { ssr: false });
@@ -70,7 +70,7 @@ const HomePage = () => {
         <main>
           {/* <div className="grid grid-cols-2 gap-10 p-12 h-[1020px] p-10"> */}
           
-          <section className="grid grid-cols-2 gap-10 p-12 p-10 h-[670px]">
+          <section className="grid grid-cols-2 gap-8 p-12 !pb-0 h-[670px]">
           <div className="w-full h-full">
               <div className="relative w-full h-[100%]" style={{ backgroundImage: `url('https://connect.cehd.umn.edu/sites/connect/files/styles/coh_x_large_super_landscape/public/2024-05/Feat1_Splash_f22-1024x512.jpg?h=d28b8abe&itok=sA_qum5U')`, backgroundSize: 'cover', backgroundPosition: 'top right' }}>
                   <Link key="1" href="/directory/" passHref className=" ">
@@ -85,7 +85,7 @@ const HomePage = () => {
                   </Link>
                 </div>
               </div>
-              <div className="w-full h-[100%] flex flex-col gap-10">
+              <div className="w-full h-[100%] flex flex-col gap-8">
                 <div className="relative w-full h-[50%] flex">
                   <div className="w-[70%] h-full" style={{ backgroundImage: `url('https://pts.umn.edu/sites/pts.umn.edu/files/2024-05/wbs_hero.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center center' }}>
                       <div className={`flex flex-col items-start justify-between cursor-pointer w-full h-full p-8`}>
@@ -101,8 +101,8 @@ const HomePage = () => {
                 <div className="relative w-full h-[50%] flex">
                   <div className="w-[70%] h-full relative" style={{ backgroundImage: `url('https://pts.umn.edu/sites/pts.umn.edu/files/2023-10/bus_banner.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center center' }}>
                     <div className={`flex flex-col items-start justify-between cursor-pointer w-full h-full p-8`}>
-                        <h2 className="text-white text-4xl font-black mb-6" style={{ textShadow: '2px 2px 4px #7a0019' }}>Gopher Way</h2>
-                        <span className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-md font-bold px-6 py-2 shadow-lg w-[95%]">Navigate the tunnels and skyways that connect our campus</span>
+                        <h2 className="text-white text-4xl font-black mb-6" style={{ textShadow: '2px 2px 4px #7a0019' }}>Campus Maps</h2>
+                        <span className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-md font-bold px-6 py-2 shadow-lg w-[95%]">Find more information about campus buildings</span>
                     </div>
                   </div>
 

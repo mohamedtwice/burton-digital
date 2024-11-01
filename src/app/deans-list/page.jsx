@@ -112,16 +112,16 @@ const DeanListPage = () => {
             muted
           ></video>
         </div> */}
-        <div id="pagetop" className="w-full h-full p-10 pt-10 flex flex-col h-[2470px]">
+        <div id="pagetop" className="w-full h-full p-10 pt-10 flex flex-col h-[1340px]">
             
             <Link href="/" className="bg-[#7a0019] text-white text-md px-4 py-1 w-full md:max-w-[175px] mb-6 text-white transform transition-transform hover:scale-105 active:scale-95 no-underline">
               &larr; Back to Home
             </Link>
 
-          <h1 className="text-6xl font-black text-[#7a0019] mb-8">CEHD Dean&apos;s List</h1>
+          <h1 className="text-6xl font-black text-[#7a0019] mb-6">CEHD Dean&apos;s List</h1>
           <div className="">
             <h3 className="text-2xl font-bold mb-3">Congratulations to all students on the dean&#39;s list!</h3>
-            <p className="text-xl mb-10">Students on the dean&#39;s list have achieved a 3.666 GPA or higher, completed at least 12 A/F credits, and received no N grades.</p>
+            <p className="text-xl mb-8">Students on the dean&#39;s list have achieved a 3.666 GPA or higher, completed at least 12 A/F credits, and received no N grades.</p>
           </div>
           {/* <div className="flex mb-16">
             <div className="bg-gray-200 w-full p-6 flex">
@@ -152,7 +152,7 @@ const DeanListPage = () => {
                         document.getElementById(`letter-${letter}`).scrollIntoView({ behavior: 'smooth' });
                         document.getElementById('pagetop').scrollIntoView({ behavior: 'smooth' });
                       }}
-                      className={` text-4xl font-bold bg-[#ffde79] text=gray-700 ${highlightedLetter === letter ? 'text-[#7a0019]' : ''}`}
+                      className={`leading-[1em] text-2xl font-bold bg-[#ffde79] text=gray-700 ${highlightedLetter === letter ? 'text-[#7a0019]' : ''}`}
                     >
                       {letter}
                     </button>
