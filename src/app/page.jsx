@@ -45,7 +45,7 @@ const HomePage = () => {
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                     >
-                      <h2 className="text-white text-4xl font-black" style={{ textShadow: '2px 2px 4px #7a0019' }}>People Directory</h2>
+                      <h2 className="text-white text-4xl font-black mb-6 bg-[#7a0019] px-4 py-2 border-l-8 border-[#FFDE79]">People Directory</h2>
                      <span className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-xl font-bold px-6 py-2 shadow-lg">Tap here to find CEHD Faculty and Staff.</span>
                     </MotionDiv>
                   </a>
@@ -55,7 +55,7 @@ const HomePage = () => {
                 <div className="relative w-full h-[50%] flex">
                   <div className="w-[70%] h-full" style={{ backgroundImage: `url(${gopherWayImage.src})`, backgroundSize: 'cover', backgroundPosition: 'center center' }}>
                       <div className={`flex flex-col items-start justify-between cursor-pointer w-full h-full p-8`}>
-                        <h2 className="text-white text-4xl font-black mb-6" style={{ textShadow: '2px 2px 4px #7a0019' }}>Gopher Way</h2>
+                        <h2 className="text-white text-4xl font-black mb-6 bg-[#7a0019] px-4 py-2 border-l-8 border-[#FFDE79]" style={{ textShadow: '2px 2px 4px #7a0019' }}>Gopher Way</h2>
                         <span className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-md font-bold px-6 py-2 shadow-lg w-[95%]">Navigate the tunnels and skyways that connect our campus</span>
                       </div>
                   </div>
@@ -67,7 +67,7 @@ const HomePage = () => {
                 <div className="relative w-full h-[50%] flex">
                   <div className="w-[70%] h-full relative" style={{ backgroundImage: `url(${campusMapsImage.src})`, backgroundSize: 'cover', backgroundPosition: 'center center' }}>
                     <div className={`flex flex-col items-start justify-between cursor-pointer w-full h-full p-8`}>
-                        <h2 className="text-white text-4xl font-black mb-6" style={{ textShadow: '2px 2px 4px #7a0019' }}>Campus Maps</h2>
+                        <h2 className="text-white text-4xl font-black mb-6 bg-[#7a0019] px-4 py-2 border-l-8 border-[#FFDE79]">Campus Maps</h2>
                         <span className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-md font-bold px-6 py-2 shadow-lg w-[95%]">Find more information about campus buildings</span>
                     </div>
                   </div>
@@ -131,7 +131,7 @@ const HomePage = () => {
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                     >
-                      <h2 className="text-white text-4xl font-black" style={{ textShadow: '2px 2px 4px #7a0019' }}>CEHD Awards</h2>
+                      <h2 className="text-white text-4xl font-black mb-6 bg-[#7a0019] px-4 py-2 border-l-8 border-[#FFDE79]">CEHD Awards</h2>
                      <span className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-md font-bold px-6 py-2 shadow-lg">Learn about outstanding work in the college</span>
                     </MotionDiv>
                   </a>
@@ -147,7 +147,7 @@ const HomePage = () => {
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                     >
-                      <h2 className="text-white text-4xl font-black" style={{ textShadow: '2px 2px 4px #7a0019' }}>CEHD Dean&apos;s List</h2>
+                      <h2 className="text-white text-4xl font-black mb-6 bg-[#7a0019] px-4 py-2 border-l-8 border-[#FFDE79]">CEHD Dean&apos;s List</h2>
                      <span className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-md font-bold px-6 py-2 shadow-lg">Congratulations to our scholars on the list</span>
                     </MotionDiv>
                   </a>
