@@ -63,10 +63,14 @@ const CEHDAwardsPage = () => {
         </div> */}
         <div id="pagetop" className="w-full h-full p-10 pt-10 flex flex-col h-[1340px]">
             
-            <button onClick={() => window.location.href = '/'} className="bg-[#7a0019] text-white text-md px-4 py-1 w-full md:max-w-[175px] mb-6 text-white transform transition-transform hover:scale-105 active:scale-95 no-underline">
+            <button 
+              onClick={() => window.location.href = '/'} 
+              className="bg-[#7a0019] text-white text-md px-4 py-1 w-full md:max-w-[175px] mb-6 text-white transform transition-transform hover:scale-105 active:scale-95 no-underline touch:bg-[#5a0013] touch:scale-95"
+              style={{ touchAction: 'manipulation' }}
+            >
               &larr; Back to Home
             </button>
-            
+
           <h1 className="text-6xl font-black text-[#7a0019] mb-6">CEHD Awards</h1>
           <div className="">
             <h3 className="text-2xl font-bold mb-3">Congratulations to our 2024 CEHD Faculty, Staff, and Student award-winners!</h3>
