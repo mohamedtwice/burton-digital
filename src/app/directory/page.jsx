@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import PageTransition from '@/components/PageTransition';
 import Link from 'next/link';
+import Image from 'next/image';
 import peopleData from '../../../public/data/people.json'; // Adjust the path as necessary
 
 export default function DirectoryPage() {
@@ -137,9 +138,12 @@ export default function DirectoryPage() {
                       <div className="block h-full border-0 bg-[#f9f7f6] hover:shadow-lg transition-shadow overflow-hidden">
                       <div className="grid grid-cols-2 h-full">
                             <div className="h-full col-span-1">
-                              <img src={person.attributes.metatag.find(meta => meta.attributes.property === "og:image")?.attributes.content || '/default-profile-image.jpg'}
+                              <Image 
+                                src={person.attributes.metatag.find(meta => meta.attributes.property === "og:image")?.attributes.content || '/default-profile-image.jpg'}
                                 alt={person.attributes.title} 
                                 className="w-full h-full object-cover object-center"
+                                width={500}
+                                height={500}
                               />
                             </div>
                             <div className="col-span-1 p-4 flex flex-col justify-between h-full">
