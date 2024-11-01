@@ -33,9 +33,9 @@ const HomePage = () => {
         <main>
           {/* <div className="grid grid-cols-2 gap-10 p-12 h-[1020px] p-10"> */}
           
-          <section className="grid grid-cols-2 gap-8 p-12 !pt-10 !pb-0 h-[670px]">
-              <div className="relative w-full h-[100%]">
-                <a key="1" href="/directory/" className="touch:bg-[#5a0013] touch:scale-105 active:scale-110" style={{ touchAction: 'manipulation', transform: 'scale(1.05)', display: 'block', width: '100%', height: '100%' }}>
+          <section className="grid grid-cols-2 gap-8 p-10 !pt-10 !pb-0 h-[670px]">
+          <div className="w-full ">
+          <a key="1" href="/cehd-directory/" className="relative w-full h-[100%] touch:bg-[#5a0013] touch:scale-105 active:scale-110" style={{ touchAction: 'manipulation', transform: 'scale(1.05)' }}>
                   <div className="absolute inset-0">
                     <Image
                       src={directoryImage.src}
@@ -50,7 +50,7 @@ const HomePage = () => {
                     <span className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-xl font-bold px-6 py-2 shadow-lg">Tap here to find CEHD Faculty and Staff.</span>
                   </div>
                 </a>
-              </div>
+                </div>
               <div className="w-full h-[100%] flex flex-col gap-8">
                 <div className="relative w-full h-[50%] flex">
                   <div className="w-[70%] h-full" style={{ backgroundImage: `url(${gopherWayImage.src})`, backgroundSize: 'cover', backgroundPosition: 'center center' }}>
@@ -108,18 +108,8 @@ const HomePage = () => {
             </div> */}
 
               {/* <div className="grid grid-cols-2 gap-10 p-10 h-[920px]"> */}
-              <section className="grid grid-cols-2 gap-10 p-10 h-[670px]">
+              <section className="grid grid-cols-2 gap-8 p-10 h-[670px]">
               <div className="w-full ">
-                {/* <div className="relative w-full h-[47%]" style={{ backgroundImage: `url('https://www.cehd.umn.edu/sites/cehd/files/styles/coh_x_large/public/2024-06/2022_CEHD%20Commencement_NicoleNeri_001.jpg?itok=3CIk2jmR')`, backgroundSize: 'cover', backgroundPosition: 'center center' }}>
-                  <Link key="2" href="https://www.cehd.umn.edu/about" passHref className=" ">
-                    <div
-                      className={`flex flex-col items-start justify-between cursor-pointer w-full h-full p-8`}
-                    >
-                      <h2 className="text-white text-6xl font-black" style={{ textShadow: '2px 2px 4px #7a0019' }}>CEHD History</h2>
-                     <span className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-2xl font-bold px-6 py-2 shadow-lg">More than 100 years of excellence</span>
-                    </div>
-                  </Link>
-                </div> */}
                 <a key="3" href="/cehd-awards/" className="relative w-full h-[100%] touch:bg-[#5a0013] touch:scale-105 active:scale-110" style={{ touchAction: 'manipulation', transform: 'scale(1.05)' }}>
                   <div className="absolute inset-0">
                     <Image
