@@ -45,8 +45,8 @@ const HomePage = () => {
     { id: 1, title: 'People Directory', href: '/directory', color: 'bg-blue-400', gridArea: 'people' },
     { id: 2, title: 'Gopher Way', href: 'https://z.umn.edu/GopherWay-Burton', color: 'bg-green-400', gridArea: 'map' },
     { id: 5, title: 'Campus Maps', href: 'https://z.umn.edu/Buildings-Burton', color: 'bg-purple-400', gridArea: 'building' },
-    { id: 3, title: 'CEHD Awards', href: '/cehd', color: 'bg-yellow-400' },
-    { id: 4, title: "CEHD Dean's List", href: '/kin', color: 'bg-red-400' },
+    { id: 3, title: 'CEHD Awards', href: '/cehd-awards', color: 'bg-yellow-400' },
+    { id: 4, title: "CEHD Dean's List", href: '/deans-list', color: 'bg-red-400' },
   ];
 
   console.log(gopherWayImage)
