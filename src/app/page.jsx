@@ -70,7 +70,7 @@ const HomePage = () => {
         <main>
           {/* <div className="grid grid-cols-2 gap-10 p-12 h-[1020px] p-10"> */}
           
-          <section className="grid grid-cols-2 gap-10 p-12 h-[950px] p-10">
+          <section className="grid grid-cols-2 gap-10 p-12 p-10 h-[50%]">
           <div className="w-full h-full">
               <div className="relative w-full h-[100%]" style={{ backgroundImage: `url('https://connect.cehd.umn.edu/sites/connect/files/styles/coh_x_large_super_landscape/public/2024-05/Feat1_Splash_f22-1024x512.jpg?h=d28b8abe&itok=sA_qum5U')`, backgroundSize: 'cover', backgroundPosition: 'top right' }}>
                   <Link key="1" href="/directory/" passHref className=" ">
@@ -86,34 +86,33 @@ const HomePage = () => {
                 </div>
               </div>
               <div className="w-full h-full py-10">
-                <div className="relative w-full h-[43%]" style={{ backgroundImage: `url('https://pts.umn.edu/sites/pts.umn.edu/files/2024-05/wbs_hero.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center center' }}>
-                  <div className="absolute bottom-0 right-0 w-24 h-24 bg-white p-2" style={{ backgroundImage: `url('/images/z-GopherWay-Burton.svg')`, backgroundSize: 'cover', backgroundPosition: 'center center' }}></div>
-                  {/* <Link key="2" href="https://z.umn.edu/GopherWay-Burton" passHref className=" "> */}
-                    <MotionDiv
-                      className={`flex flex-col items-start justify-between cursor-pointer w-full h-full p-8`}
-                      whileHover={{ scale: 1.05 }}
-                      whileTap={{ scale: 0.95 }}
-                    >
-                     <h2 className="text-white text-4xl font-black mb-6" style={{ textShadow: '2px 2px 4px #7a0019' }}>Gopher Way</h2>
-                     <span className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-md font-bold px-6 py-2 shadow-lg w-[75%]">Navigate the tunnels and skyways that connect our campus</span>
-                    </MotionDiv>
-                  {/* </Link> */}
-                  {/* <img src="/images/z-GopherWay-Burton.svg" alt="Overlay SVG" className="absolute bottom-0 right-0 w-16 h-16" /> */}
+                <div className="relative w-full h-[45%] flex">
+                  <div className="w-[70%] h-full" style={{ backgroundImage: `url('https://pts.umn.edu/sites/pts.umn.edu/files/2024-05/wbs_hero.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center center' }}>
+                      <div className={`flex flex-col items-start justify-between cursor-pointer w-full h-full p-8`}>
+                        <h2 className="text-white text-4xl font-black mb-6" style={{ textShadow: '2px 2px 4px #7a0019' }}>Gopher Way</h2>
+                        <span className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-md font-bold px-6 py-2 shadow-lg w-[95%]">Navigate the tunnels and skyways that connect our campus</span>
+                      </div>
+                  </div>
+                  <div className="w-[30%] h-full flex items-center justify-center relative">
+                    <img src="/images/arrow-right-down.svg" alt="Arrow Right Down" className="absolute top-0 h-16 -ml-6" />
+                    <div className="w-24 h-24 bg-white p-2" style={{ backgroundImage: `url('/images/z-GopherWay-Burton.svg')`, backgroundSize: 'cover', backgroundPosition: 'center center' }}></div>
+                  </div>
                 </div>
-                <div className="relative w-full h-[43%] mt-10" style={{ backgroundImage: `url('https://pts.umn.edu/sites/pts.umn.edu/files/2023-10/bus_banner.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center center' }}>
-                <div className="absolute bottom-0 right-0 w-24 h-24 bg-white p-2" style={{ backgroundImage: `url('/images/z-Buildings-Burton.svg')`, backgroundSize: 'cover', backgroundPosition: 'center center' }}></div>
-                {/* <Link key="3" href="https://z.umn.edu/Buildings-Burton" passHref className=""> */}
-                    <MotionDiv
-                      className={`flex flex-col items-start justify-between cursor-pointer w-full h-full p-8`}
-                      // whileHover={{ scale: 1.05 }}
-                      // whileTap={{ scale: 0.95 }}
-                    >
-                      <h2 className="text-white text-4xl font-black" style={{ textShadow: '2px 2px 4px #7a0019' }}>Campus Maps</h2>
-                     <span className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-md font-bold px-6 py-2 shadow-lg w-[75%]">Find information about campus buildings</span>
-                    </MotionDiv>
-                  {/* </Link> */}
+                <div className="relative w-full h-[45%] mt-10 flex">
+                  <div className="w-[70%] h-full relative" style={{ backgroundImage: `url('https://pts.umn.edu/sites/pts.umn.edu/files/2023-10/bus_banner.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center center' }}>
+                    <div className={`flex flex-col items-start justify-between cursor-pointer w-full h-full p-8`}>
+                        <h2 className="text-white text-4xl font-black mb-6" style={{ textShadow: '2px 2px 4px #7a0019' }}>Gopher Way</h2>
+                        <span className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-md font-bold px-6 py-2 shadow-lg w-[95%]">Navigate the tunnels and skyways that connect our campus</span>
+                    </div>
+                  </div>
+
+                  <div className="w-[30%] h-full flex items-center justify-center relative">
+                    <div className="w-24 h-24 bg-white p-2" style={{ backgroundImage: `url('/images/z-Buildings-Burton.svg')`, backgroundSize: 'cover', backgroundPosition: 'center center' }}></div>
+                    <img src="/images/arrow-right-top.svg" alt="Arrow Right Up" className="absolute bottom-0 h-16 -ml-6" />
+                  </div>
                 </div>
-                <div className="relative w-full h-[10%] py-10">
+                
+                {/* <div className="relative w-full h-[10%] py-10">
                 <Link key="7" href="https://campusmaps.umn.edu/" passHref className="">
                   <MotionDiv
                     className={`text-[#FFDE79] border-l-8 border-[#FFDE79] p-6 text-sm font-bold bg-[#7a0019] cursor-pointer w-full h-[10%] inline-flex flex-row items-center w-auto`}
@@ -126,7 +125,7 @@ const HomePage = () => {
                     Tap here for more campus map information.
                   </MotionDiv>
                 </Link>
-                </div>
+                </div> */}
                 
               </div>
             </section>
@@ -145,8 +144,8 @@ const HomePage = () => {
             </div> */}
 
               {/* <div className="grid grid-cols-2 gap-10 p-10 h-[920px]"> */}
-              <section className="grid grid-cols-2 gap-10 p-10 h-[950px]">
-              <div className="w-full h-full -10">
+              <section className="grid grid-cols-2 gap-10 p-10 h-[50%]">
+              <div className="w-full ">
                 {/* <div className="relative w-full h-[47%]" style={{ backgroundImage: `url('https://www.cehd.umn.edu/sites/cehd/files/styles/coh_x_large/public/2024-06/2022_CEHD%20Commencement_NicoleNeri_001.jpg?itok=3CIk2jmR')`, backgroundSize: 'cover', backgroundPosition: 'center center' }}>
                   <Link key="2" href="https://www.cehd.umn.edu/about" passHref className=" ">
                     <MotionDiv
