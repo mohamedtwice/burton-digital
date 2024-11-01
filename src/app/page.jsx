@@ -6,7 +6,7 @@ import dynamic from 'next/dynamic';
 import PageTransition from '@/components/PageTransition';
 import gopherWayImage from '../../public/images/gopher_way.jpg'
 import deanRodriguezImage from '../../public/images/DeanRodriguez.webp'
-import directoryImage from '../../public/images/Faculty_Splash_2.webp'
+import directoryImage from '../../public/images/Faculty_Splash_3.png'
 import VideoRotation from '@/components/VideoRotation';
 import VideoHome from '@/components/VideoHome';
 const MotionMain = dynamic(() => import('../components/MotionMain'), { ssr: false });
@@ -71,10 +71,10 @@ const HomePage = () => {
         <main>
           {/* <div className="grid grid-cols-2 gap-10 p-12 h-[1020px] p-10"> */}
           
-          <section className="grid grid-cols-2 gap-8 p-12 !pb-0 h-[670px]">
+          <section className="grid grid-cols-2 gap-8 p-12 !pt-10 !pb-0 h-[670px]">
           <div className="w-full h-full">
               <div className="relative w-full h-[100%]" style={{ backgroundImage:  `url(${directoryImage.src})`, backgroundSize: 'cover', backgroundPosition: 'center right' }}>
-                  <Link key="1" href="/directory/" passHref className=" ">
+                  <a key="1" href="/directory/" className=" ">
                     <MotionDiv
                       className={`flex flex-col items-start justify-between cursor-pointer w-full h-full p-8`}
                       whileHover={{ scale: 1.05 }}
@@ -83,7 +83,7 @@ const HomePage = () => {
                       <h2 className="text-white text-4xl font-black" style={{ textShadow: '2px 2px 4px #7a0019' }}>People Directory</h2>
                      <span className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-xl font-bold px-6 py-2 shadow-lg">Tap here to find CEHD Faculty and Staff.</span>
                     </MotionDiv>
-                  </Link>
+                  </a>
                 </div>
               </div>
               <div className="w-full h-[100%] flex flex-col gap-8">
@@ -160,7 +160,7 @@ const HomePage = () => {
                   </Link>
                 </div> */}
                 <div className="relative w-full h-[100%] -10" style={{ backgroundImage: `url('https://pbs.twimg.com/media/GY03trTXwAAHuM5?format=jpg&name=large')`, backgroundSize: 'cover', backgroundPosition: 'top center' }}>
-                <Link key="3" href="/cehd-awards/" passHref className="">
+                <a key="3" href="/cehd-awards/" className="">
                     <MotionDiv
                       className={`flex flex-col items-start justify-between cursor-pointer w-full h-full p-8`}
                       whileHover={{ scale: 1.05 }}
@@ -169,14 +169,14 @@ const HomePage = () => {
                       <h2 className="text-white text-4xl font-black" style={{ textShadow: '2px 2px 4px #7a0019' }}>CEHD Awards</h2>
                      <span className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-md font-bold px-6 py-2 shadow-lg">Learn about outstanding work in the college</span>
                     </MotionDiv>
-                  </Link>
+                  </a>
                 </div>
                 
               </div>
               <div className="w-full h-full">
 
               <div className="relative w-full h-[100%]" style={{ backgroundImage: `url(${deanRodriguezImage.src})`, backgroundSize: 'cover', backgroundPosition: 'top center' }}>
-              <Link key="6" href="/deans-list/" passHref className="">
+              <a key="6" href="/deans-list/" className="">
               <MotionDiv
                       className={`flex flex-col items-start justify-between cursor-pointer w-full h-full p-8`}
                       whileHover={{ scale: 1.05 }}
@@ -185,7 +185,7 @@ const HomePage = () => {
                       <h2 className="text-white text-4xl font-black" style={{ textShadow: '2px 2px 4px #7a0019' }}>CEHD Dean&apos;s List</h2>
                      <span className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-md font-bold px-6 py-2 shadow-lg">Congratulations to our scholars on the list</span>
                     </MotionDiv>
-                  </Link>
+                  </a>
                 </div>
               </div>
             </section>

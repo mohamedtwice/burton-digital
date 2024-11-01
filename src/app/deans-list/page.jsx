@@ -144,7 +144,7 @@ const DeanListPage = () => {
           </div> */}
           <div className="flex overflow-y-auto h-[100%] px-10">
             <div className="sticky top-0 flex flex-col mr-4 flex-grow max-w-20 overflow-y-auto">
-              <ul className="flex flex-col w-full justify-end items-center p-4 gap-4 bg-[#ffde79]">
+              <ul className="flex flex-col w-full justify-end items-center p-4 gap-3 bg-[#ffde79]">
                 {'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').map((letter) => (
                   <li key={letter} className="flex flex-col items-center">
                     <button
