@@ -72,9 +72,9 @@ export default function DirectoryPage() {
 
 <div className="w-full h-full p-10 pt-10 flex flex-col  h-[2470px]">
             
-            <Link href="/" className="bg-[#7a0019] text-white text-md px-4 py-1 w-full md:max-w-[175px] mb-6 text-white transform transition-transform hover:scale-105 active:scale-95 no-underline">
+            <button onClick={() => window.location.href = '/'} className="bg-[#7a0019] text-white text-md px-4 py-1 w-full md:max-w-[175px] mb-6 text-white transform transition-transform hover:scale-105 active:scale-95 no-underline">
               &larr; Back to Home
-            </Link>
+            </button>
 
           <h1 className="text-6xl font-black text-[#7a0019] mb-8">College Directory</h1>
           
