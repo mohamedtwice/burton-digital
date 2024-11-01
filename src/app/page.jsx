@@ -36,7 +36,7 @@ const HomePage = () => {
           <section className="grid grid-cols-2 gap-8 p-12 !pt-10 !pb-0 h-[670px]">
           <div className="w-full h-full">
               <div className="relative w-full h-[100%]" style={{ backgroundImage:  `url(${directoryImage.src})`, backgroundSize: 'cover', backgroundPosition: 'center right' }}>
-                  <a key="1" href="/directory/" className=" " style={{ touchAction: 'manipulation', transform: 'scale(1.05)' }}>
+                  <a key="1" href="/directory/" className="touch:bg-[#5a0013] touch:scale-105 active:scale-110" style={{ touchAction: 'manipulation', transform: 'scale(1.05)' }}>
                     <div
                       className={`flex flex-col items-start justify-between cursor-pointer w-full h-full p-8`}
                     >
@@ -116,7 +116,7 @@ const HomePage = () => {
                   </Link>
                 </div> */}
                 <div className="relative w-full h-[100%] -10" style={{ backgroundImage: `url(${cehdAwardsImage.src})`, backgroundSize: 'cover', backgroundPosition: 'top center' }}>
-                <a key="3" href="/cehd-awards/" className="" style={{ touchAction: 'manipulation', transform: 'scale(1.05)' }}>
+                <a key="3" href="/cehd-awards/" className="touch:bg-[#5a0013] touch:scale-105 active:scale-110" style={{ touchAction: 'manipulation', transform: 'scale(1.05)' }}>
                     <div
                       className={`flex flex-col items-start justify-between cursor-pointer w-full h-full p-8`}
                     >
@@ -130,7 +130,7 @@ const HomePage = () => {
               <div className="w-full h-full">
 
               <div className="relative w-full h-[100%]" style={{ backgroundImage: `url(${deanRodriguezImage.src})`, backgroundSize: 'cover', backgroundPosition: 'top center' }}>
-              <a key="6" href="/deans-list/" className="" style={{ touchAction: 'manipulation', transform: 'scale(1.05)' }}>
+              <a key="6" href="/deans-list/" className="touch:bg-[#5a0013] touch:scale-105 active:scale-110" style={{ touchAction: 'manipulation', transform: 'scale(1.05)' }}>
               <div
                       className={`flex flex-col items-start justify-between cursor-pointer w-full h-full p-8`}
                     >
