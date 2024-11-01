@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
+import Image from 'next/image';
 import PageTransition from '@/components/PageTransition';
 import gopherWayImage from '../../public/images/gopher_way.jpg'
 import deanRodriguezImage from '../../public/images/DeanRodriguez.webp'
@@ -95,7 +96,7 @@ const HomePage = () => {
                       </div>
                   </div>
                   <div className="w-[30%] h-full flex items-center justify-center relative">
-                    <img src="/images/arrow-right-down.svg" alt="Arrow Right Down" className="absolute top-0 h-16 -ml-6" />
+                    <Image src="/images/arrow-right-down.svg" alt="Arrow Right Down" className="absolute top-0 h-16 -ml-6" width={64} height={64} />
                     <div className="w-24 h-24 bg-white p-2" style={{ backgroundImage: `url('/images/z-GopherWay-Burton.svg')`, backgroundSize: 'cover', backgroundPosition: 'center center' }}></div>
                   </div>
                 </div>
@@ -109,7 +110,7 @@ const HomePage = () => {
 
                   <div className="w-[30%] h-full flex items-center justify-center relative">
                     <div className="w-24 h-24 bg-white p-2" style={{ backgroundImage: `url('/images/z-Buildings-Burton.svg')`, backgroundSize: 'cover', backgroundPosition: 'center center' }}></div>
-                    <img src="/images/arrow-right-top.svg" alt="Arrow Right Up" className="absolute bottom-0 h-16 -ml-6" />
+                    <Image src="/images/arrow-right-top.svg" alt="Arrow Right Up" className="absolute bottom-0 h-16 -ml-6" width={64} height={64} />
                   </div>
                 </div>
                 

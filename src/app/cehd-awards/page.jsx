@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import PageTransition from '@/components/PageTransition';
 import Link from 'next/link';
+import Image from 'next/image';
 import awardsData from '../../../public/data/cehd_awards.json'; // Import the awards data
 
 const CEHDAwardsPage = () => {
@@ -127,9 +128,11 @@ const CEHDAwardsPage = () => {
                     <Link href={award.Link} className="block border-0 bg-[#f9f7f6] hover:shadow-lg transition-shadow overflow-hidden">
                       <div className="grid grid-cols-2">
                         <div className="col-span-1">
-                          <img src={award.Image || '/default-profile-image.jpg'}
+                          <Image src={award.Image || '/default-profile-image.jpg'}
                             alt={award.Name} 
                             className="w-full h-[250px] object-cover object-center"
+                            width={500}
+                            height={250}
                           />
                         </div>
                         <div className="col-span-1 p-4 flex flex-col justify-between">
@@ -147,9 +150,11 @@ const CEHDAwardsPage = () => {
                     <div className="block border-2 bg-white hover:shadow-lg transition-shadow overflow-hidden">
                       <div className="grid grid-cols-2">
                         <div className="col-span-1">
-                          <img src={award.Image || '/default-profile-image.jpg'}
+                          <Image src={award.Image || '/default-profile-image.jpg'}
                             alt={award.Name} 
                             className="w-full h-[250px] object-cover object-center"
+                            width={500}
+                            height={250}
                           />
                         </div>
                         <div className="col-span-1 p-6 flex flex-col justify-between">
