@@ -1,60 +1,22 @@
-'use client';
-
-import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import PageTransition from '@/components/PageTransition';
 import gopherWayImage from '../../public/images/gopher_way.jpg'
 import deanRodriguezImage from '../../public/images/DeanRodriguez.webp'
-import directoryImage from '../../public/images/Faculty_Splash_2.webp'
-import VideoRotation from '@/components/VideoRotation';
-import VideoHome from '@/components/VideoHome';
+import directoryImage from '../../public/images/Faculty_Splash_f22.webp'
 const MotionMain = dynamic(() => import('../components/MotionMain'), { ssr: false });
 const MotionDiv = dynamic(() => import('../components/MotionDiv'), { ssr: false });
 
 const INACTIVITY_TIMEOUT = 20000; // 20 seconds
 
 const HomePage = () => {
-  const [lastInteractionTime, setLastInteractionTime] = useState(Date.now());
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
-
-  useEffect(() => {
-    if (!isClient) return;
-
-    const intervalId = setInterval(() => {
-      if (Date.now() - lastInteractionTime > INACTIVITY_TIMEOUT) {
-        // Reset to home page after inactivity
-        window.history.pushState(null, '', '/');
-      }
-    }, 1000);
-
-    return () => clearInterval(intervalId);
-  }, [lastInteractionTime, isClient]);
-
-  const handleInteraction = () => {
-    if (!isClient) return;
-    setLastInteractionTime(Date.now());
-  };
-
-  const options = [
-    { id: 1, title: 'People Directory', href: '/directory', color: 'bg-blue-400', gridArea: 'people' },
-    { id: 2, title: 'Gopher Way', href: 'https://z.umn.edu/GopherWay-Burton', color: 'bg-green-400', gridArea: 'map' },
-    { id: 5, title: 'Campus Maps', href: 'https://z.umn.edu/Buildings-Burton', color: 'bg-purple-400', gridArea: 'building' },
-    { id: 3, title: 'CEHD Awards', href: '/cehd-awards', color: 'bg-yellow-400' },
-    { id: 4, title: "CEHD Dean's List", href: '/deans-list', color: 'bg-red-400' },
-  ];
 
   console.log(gopherWayImage)
   return (
     <PageTransition>
-      {isClient && (
         <MotionMain className="flex flex-col">
-          <div className="w-full bg-white" onClick={handleInteraction}>
+          <div className="w-full bg-white">
 
         <header>
           {/* <div className="relative w-full h-[1140px] bg-[#FFDE79]"> */}
@@ -193,7 +155,6 @@ const HomePage = () => {
             </main>
           </div>
         </MotionMain>
-      )}
     </PageTransition>
   );
 };
