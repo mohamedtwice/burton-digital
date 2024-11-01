@@ -6,6 +6,7 @@ import dynamic from 'next/dynamic';
 import PageTransition from '@/components/PageTransition';
 import gopherWayImage from '../../public/images/gopher_way.jpg'
 import deanRodriguezImage from '../../public/images/DeanRodriguez.webp'
+import directoryImage from '../../public/images/Faculty_Splash_2.webp'
 import VideoRotation from '@/components/VideoRotation';
 import VideoHome from '@/components/VideoHome';
 const MotionMain = dynamic(() => import('../components/MotionMain'), { ssr: false });
@@ -72,7 +73,7 @@ const HomePage = () => {
           
           <section className="grid grid-cols-2 gap-8 p-12 !pb-0 h-[670px]">
           <div className="w-full h-full">
-              <div className="relative w-full h-[100%]" style={{ backgroundImage: `url('https://connect.cehd.umn.edu/sites/connect/files/styles/coh_x_large_super_landscape/public/2024-05/Feat1_Splash_f22-1024x512.jpg?h=d28b8abe&itok=sA_qum5U')`, backgroundSize: 'cover', backgroundPosition: 'top right' }}>
+              <div className="relative w-full h-[100%]" style={{ backgroundImage:  `url(${directoryImage.src})`, backgroundSize: 'cover', backgroundPosition: 'center right' }}>
                   <Link key="1" href="/directory/" passHref className=" ">
                     <MotionDiv
                       className={`flex flex-col items-start justify-between cursor-pointer w-full h-full p-8`}
