@@ -34,17 +34,22 @@ const HomePage = () => {
           {/* <div className="grid grid-cols-2 gap-10 p-12 h-[1020px] p-10"> */}
           
           <section className="grid grid-cols-2 gap-8 p-12 !pt-10 !pb-0 h-[670px]">
-          <div className="w-full h-full">
-              <div className="relative w-full h-[100%]" style={{ backgroundImage:  `url(${directoryImage.src})`, backgroundSize: 'cover', backgroundPosition: 'center right' }}>
-                  <a key="1" href="/directory/" className="touch:bg-[#5a0013] touch:scale-105 active:scale-110" style={{ touchAction: 'manipulation', transform: 'scale(1.05)' }}>
-                    <div
-                      className={`flex flex-col items-start justify-between cursor-pointer w-full h-full p-8`}
-                    >
-                      <h2 className="text-white text-4xl font-black mb-6 bg-[#7a0019] px-4 py-2 border-l-8 border-[#FFDE79]">People Directory</h2>
-                     <span className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-xl font-bold px-6 py-2 shadow-lg">Tap here to find CEHD Faculty and Staff.</span>
-                    </div>
-                  </a>
-                </div>
+              <div className="relative w-full h-[100%]">
+                <a key="1" href="/directory/" className="touch:bg-[#5a0013] touch:scale-105 active:scale-110" style={{ touchAction: 'manipulation', transform: 'scale(1.05)', display: 'block', width: '100%', height: '100%' }}>
+                  <div className="absolute inset-0">
+                    <Image
+                      src={directoryImage.src}
+                      alt="People Directory"
+                      layout="fill"
+                      objectFit="cover"
+                      objectPosition="center right"
+                    />
+                  </div>
+                  <div className={`relative flex flex-col items-start justify-between cursor-pointer w-full h-full p-8`}>
+                    <h2 className="text-white text-4xl font-black mb-6 bg-[#7a0019] px-4 py-2 border-l-8 border-[#FFDE79]">People Directory</h2>
+                    <span className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-xl font-bold px-6 py-2 shadow-lg">Tap here to find CEHD Faculty and Staff.</span>
+                  </div>
+                </a>
               </div>
               <div className="w-full h-[100%] flex flex-col gap-8">
                 <div className="relative w-full h-[50%] flex">
@@ -115,30 +120,44 @@ const HomePage = () => {
                     </div>
                   </Link>
                 </div> */}
-                <div className="relative w-full h-[100%] -10" style={{ backgroundImage: `url(${cehdAwardsImage.src})`, backgroundSize: 'cover', backgroundPosition: 'top center' }}>
-                <a key="3" href="/cehd-awards/" className="touch:bg-[#5a0013] touch:scale-105 active:scale-110" style={{ touchAction: 'manipulation', transform: 'scale(1.05)' }}>
-                    <div
-                      className={`flex flex-col items-start justify-between cursor-pointer w-full h-full p-8`}
-                    >
-                      <h2 className="text-white text-4xl font-black mb-6 bg-[#7a0019] px-4 py-2 border-l-8 border-[#FFDE79]">CEHD Awards</h2>
-                     <span className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-md font-bold px-6 py-2 shadow-lg">Learn about outstanding work in the college</span>
-                    </div>
-                  </a>
-                </div>
+                <a key="3" href="/cehd-awards/" className="relative w-full h-[100%] touch:bg-[#5a0013] touch:scale-105 active:scale-110" style={{ touchAction: 'manipulation', transform: 'scale(1.05)' }}>
+                  <div className="absolute inset-0">
+                    <Image
+                      src={cehdAwardsImage.src}
+                      alt="CEHD Awards"
+                      layout="fill"
+                      objectFit="cover"
+                      objectPosition="top center"
+                    />
+                  </div>
+                  <div
+                    className={`relative flex flex-col items-start justify-between cursor-pointer w-full h-full p-8`}
+                  >
+                    <h2 className="text-white text-4xl font-black mb-6 bg-[#7a0019] px-4 py-2 border-l-8 border-[#FFDE79]">CEHD Awards</h2>
+                    <span className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-md font-bold px-6 py-2 shadow-lg">Learn about outstanding work in the college</span>
+                  </div>
+                </a>
                 
               </div>
               <div className="w-full h-full">
 
-              <div className="relative w-full h-[100%]" style={{ backgroundImage: `url(${deanRodriguezImage.src})`, backgroundSize: 'cover', backgroundPosition: 'top center' }}>
-              <a key="6" href="/deans-list/" className="touch:bg-[#5a0013] touch:scale-105 active:scale-110" style={{ touchAction: 'manipulation', transform: 'scale(1.05)' }}>
-              <div
-                      className={`flex flex-col items-start justify-between cursor-pointer w-full h-full p-8`}
-                    >
-                      <h2 className="text-white text-4xl font-black mb-6 bg-[#7a0019] px-4 py-2 border-l-8 border-[#FFDE79]">CEHD Dean&apos;s List</h2>
-                     <span className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-md font-bold px-6 py-2 shadow-lg">Congratulations to our scholars on the list</span>
-                    </div>
-                  </a>
+              <a key="6" href="/deans-list/" className="relative w-full h-[100%] touch:bg-[#5a0013] touch:scale-105 active:scale-110" style={{ touchAction: 'manipulation', transform: 'scale(1.05)' }}>
+                <div className="absolute inset-0">
+                  <Image
+                    src={deanRodriguezImage.src}
+                    alt="Dean Rodriguez"
+                    layout="fill"
+                    objectFit="cover"
+                    objectPosition="top center"
+                  />
                 </div>
+                <div
+                  className={`relative flex flex-col items-start justify-between cursor-pointer w-full h-full p-8`}
+                >
+                  <h2 className="text-white text-4xl font-black mb-6 bg-[#7a0019] px-4 py-2 border-l-8 border-[#FFDE79]">CEHD Dean&apos;s List</h2>
+                  <span className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-md font-bold px-6 py-2 shadow-lg">Congratulations to our scholars on the list</span>
+                </div>
+              </a>
               </div>
             </section>
             </main>
