@@ -132,16 +132,17 @@ export default function DirectoryPage() {
                 <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-h-[1000px]">
                   {filteredPeople.map((person) => {
                     return (
-                      <li key={person.id}>
-                      <Link href={person.attributes.metatag.find(meta => meta.attributes.property === "og:url")?.attributes.content} className="block border-0 bg-[#f9f7f6] hover:shadow-lg transition-shadow  overflow-hidden">
-                      <div className="grid grid-cols-2 ">
-                            <div className="col-span-1">
+                      <li key={person.id} className="h-full">
+                      {/* <Link href={person.attributes.metatag.find(meta => meta.attributes.property === "og:url")?.attributes.content} className="block border-0 bg-[#f9f7f6] hover:shadow-lg transition-shadow  overflow-hidden"> */}
+                      <div className="block h-full border-0 bg-[#f9f7f6] hover:shadow-lg transition-shadow overflow-hidden">
+                      <div className="grid grid-cols-2 h-full">
+                            <div className="h-full col-span-1">
                               <img src={person.attributes.metatag.find(meta => meta.attributes.property === "og:image")?.attributes.content || '/default-profile-image.jpg'}
                                 alt={person.attributes.title} 
-                                className="w-full h-full min-h-[260px] object-cover object-center "
+                                className="w-full h-full object-cover object-center"
                               />
                             </div>
-                            <div className="col-span-1 p-4 flex flex-col justify-between">
+                            <div className="col-span-1 p-4 flex flex-col justify-between h-full">
                               <div> 
                               <h2 className="text-md font-bold text-[#7a0019] mb-2 break-words">{person.attributes.title}</h2>
                               <p className="text-sm font-light leading-tight text-[#333333] mb-2 break-words">{(person.attributes.field_person_working_title || person.attributes.field_person_wtitle)?.toLowerCase().replace(/\b\w/g, c => c.toUpperCase())}</p>
@@ -151,7 +152,7 @@ export default function DirectoryPage() {
                               </div>
                             </div>
                           </div>
-                        </Link>
+                        </div>
                       </li>
                     );
                   })}
