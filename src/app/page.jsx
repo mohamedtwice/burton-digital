@@ -16,23 +16,7 @@ const HomePage = () => {
     <PageTransition>
         <div className="flex flex-col">
           <div className="w-full bg-white">
-
-        <header>
-          {/* <div className="relative w-full h-[1140px] bg-[#FFDE79]"> */}
-              {/* <video
-                className="absolute top-0 left-0 w-full h-full object-cover"
-                src="https://player.vimeo.com/progressive_redirect/playback/970909944/rendition/1080p/file.mp4?loc=external&signature=491f6a5e397a0adf16f1f82a2b211a482a98718e86fd379ef647b7ba60afd439"
-                autoPlay
-                loop
-                muted
-              ></video> */}
-              {/* <VideoHome /> */}
-          {/* </div> */}
-        </header>
-
         <main>
-          {/* <div className="grid grid-cols-2 gap-10 p-12 h-[1020px] p-10"> */}
-          
           <section className="grid grid-cols-2 gap-8 p-10 !pt-10 !pb-0 h-[670px]">
           <div className="w-full ">
           <a key="1" href="/cehd-directory/" className="relative w-full h-[100%] touch:bg-[#5a0013] touch:scale-105 active:scale-110" style={{ touchAction: 'manipulation', transform: 'scale(1.05)' }}>
@@ -55,8 +39,12 @@ const HomePage = () => {
                 <div className="relative w-full h-[50%] flex">
                   <div className="w-[70%] h-full" style={{ backgroundImage: `url(${gopherWayImage.src})`, backgroundSize: 'cover', backgroundPosition: 'center center' }}>
                       <div className={`flex flex-col items-start justify-between cursor-pointer w-full h-full p-8`}>
-                        <h2 className="text-white text-4xl font-black mb-6 bg-[#7a0019] px-4 py-2 border-l-8 border-[#FFDE79]" style={{ textShadow: '2px 2px 4px #7a0019' }}>Gopher Way</h2>
-                        <span className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-md font-bold px-6 py-2 shadow-lg w-[95%]">Navigate the tunnels and skyways that connect our campus</span>
+                        <h2 className="text-white text-4xl font-black mb-6 bg-[#7a0019] px-4 py-2 border-l-8 border-[#FFDE79]" style={{ textShadow: '2px 2px 4px #7a0019' }}>
+                          Gopher Way
+                        </h2>
+                        <span className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-md font-bold px-6 py-2 shadow-lg w-[95%]">
+                          Scan this QR code to navigate the tunnels and skyways that connect our campus
+                        </span>
                       </div>
                   </div>
                   <div className="w-[30%] h-full flex items-center justify-center relative">
@@ -67,8 +55,12 @@ const HomePage = () => {
                 <div className="relative w-full h-[50%] flex">
                   <div className="w-[70%] h-full relative" style={{ backgroundImage: `url(${campusMapsImage.src})`, backgroundSize: 'cover', backgroundPosition: 'center center' }}>
                     <div className={`flex flex-col items-start justify-between cursor-pointer w-full h-full p-8`}>
-                        <h2 className="text-white text-4xl font-black mb-6 bg-[#7a0019] px-4 py-2 border-l-8 border-[#FFDE79]">Campus Maps</h2>
-                        <span className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-md font-bold px-6 py-2 shadow-lg w-[95%]">Find more information about campus buildings</span>
+                        <h2 className="text-white text-4xl font-black mb-6 bg-[#7a0019] px-4 py-2 border-l-8 border-[#FFDE79]">
+                          Campus Maps
+                        </h2>
+                        <span className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-md font-bold px-6 py-2 shadow-lg w-[95%]">
+                          Scan ths QR code to find more information about campus buildings
+                        </span>
                     </div>
                   </div>
 
@@ -77,37 +69,11 @@ const HomePage = () => {
                     <Image src="/images/arrow-right-top.svg" alt="Arrow Right Up" className="absolute bottom-0 h-16 -ml-6" width={64} height={64} />
                   </div>
                 </div>
-                
-                {/* <div className="relative w-full h-[10%] py-10">
-                <Link key="7" href="https://campusmaps.umn.edu/" passHref className="">
-                  <div
-                    className={`text-[#FFDE79] border-l-8 border-[#FFDE79] p-6 text-sm font-bold bg-[#7a0019] cursor-pointer w-full h-[10%] inline-flex flex-row items-center w-auto`}
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mt-1 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3l7 7-7 7M21 3l-7 7 7 7" />
-                    </svg>
-                    Tap here for more campus map information.
-                  </div>
-                </Link>
-                </div> */}
-                
+              
               </div>
             </section>
 
 
-            {/* <div className="relative h-[510px] py-5 mx-10">
-              <VideoRotation />
-              <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 mb-4">
-                <a
-                  href="https://cehd.umn.edu"
-                  className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-2xl font-bold px-6 py-2 shadow-lg"
-                >
-                  Visit CEHD
-                </a>
-              </div>
-            </div> */}
-
-              {/* <div className="grid grid-cols-2 gap-10 p-10 h-[920px]"> */}
               <section className="grid grid-cols-2 gap-8 p-10 h-[670px]">
               <div className="w-full ">
                 <a key="3" href="/cehd-awards/" className="relative w-full h-[100%] touch:bg-[#5a0013] touch:scale-105 active:scale-110" style={{ touchAction: 'manipulation', transform: 'scale(1.05)' }}>
@@ -123,8 +89,12 @@ const HomePage = () => {
                   <div
                     className={`relative flex flex-col items-start justify-between cursor-pointer w-full h-full p-8`}
                   >
-                    <h2 className="text-white text-4xl font-black mb-6 bg-[#7a0019] px-4 py-2 border-l-8 border-[#FFDE79]">CEHD Awards</h2>
-                    <span className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-md font-bold px-6 py-2 shadow-lg">Learn about outstanding work in the college</span>
+                    <h2 className="text-white text-4xl font-black mb-6 bg-[#7a0019] px-4 py-2 border-l-8 border-[#FFDE79]">
+                      CEHD Awards
+                    </h2>
+                    <span className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-md font-bold px-6 py-2 shadow-lg">
+                      Congratulations to our 2024 CEHD Faculty, Staff, and Student award-winners!
+                    </span>
                   </div>
                 </a>
                 
@@ -144,8 +114,12 @@ const HomePage = () => {
                 <div
                   className={`relative flex flex-col items-start justify-between cursor-pointer w-full h-full p-8`}
                 >
-                  <h2 className="text-white text-4xl font-black mb-6 bg-[#7a0019] px-4 py-2 border-l-8 border-[#FFDE79]">CEHD Dean&apos;s List</h2>
-                  <span className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-md font-bold px-6 py-2 shadow-lg">Congratulations to our scholars on the list</span>
+                  <h2 className="text-white text-4xl font-black mb-6 bg-[#7a0019] px-4 py-2 border-l-8 border-[#FFDE79]">
+                    CEHD Dean&apos;s List
+                  </h2>
+                  <span className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-md font-bold px-6 py-2 shadow-lg">
+                    Congratulations to our scholars on the Spring 2024 Dean&apos;s list
+                  </span>
                 </div>
               </a>
               </div>
