@@ -141,15 +141,15 @@ const HomePage = () => {
               </div>
               <div className="w-full h-full">
 
-              <div className="relative w-full h-[100%]" style={{ backgroundImage: `url(${deanListImage.src})`, backgroundSize: 'cover', backgroundPosition: 'top center' }}>
+              <div className="relative w-full h-[100%]" style={{ backgroundImage: `url(${deanListImage.src})`, backgroundSize: 'cover', backgroundPosition: 'center center' }}>
               <a key="6" href="/deans-list/" className="">
               <MotionDiv
                       className={`flex flex-col items-start justify-between cursor-pointer w-full h-full p-8`}
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                     >
-                      <h2 className="text-white text-4xl font-black mb-6 bg-[#7a0019] px-4 py-2 border-l-8 border-[#FFDE79]">CEHD Dean&apos;s List</h2>
-                     <span className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-md font-bold px-6 py-2 shadow-lg">Congratulations to our scholars on the list</span>
+                      {/* <h2 className="text-white text-4xl font-black mb-6 bg-[#7a0019] px-4 py-2 border-l-8 border-[#FFDE79]">CEHD Dean&apos;s List</h2> */}
+                     {/* <span className="bg-[#FFDE79] text-[#7a0019] border-l-8 border-[#7a0019] text-md font-bold px-6 py-2 shadow-lg">Congratulations to our scholars on the list</span> */}
                     </MotionDiv>
                   </a>
                 </div>
