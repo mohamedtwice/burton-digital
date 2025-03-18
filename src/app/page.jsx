@@ -6,7 +6,7 @@ import gopherWayImage from '../../public/images/wbs_hero.webp'
 import campusMapsImage from '../../public/images/bus_banner.webp'
 import cehdAwardsImage from '../../public/images/cehd-awards.avif'
 import deanRodriguezImage from '../../public/images/DeanRodriguez.avif'
-import deanListImage from '../../public/images/DeansList_F24_sq.png'
+import deanListImage from '../../public/images/DeansList_EG.png'
 import directoryImage from '../../public/images/Faculty_Splash_f22.avif'
 const MotionMain = dynamic(() => import('../components/MotionMain'), { ssr: false });
 const MotionDiv = dynamic(() => import('../components/MotionDiv'), { ssr: false });
