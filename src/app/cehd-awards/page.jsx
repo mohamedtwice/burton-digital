@@ -125,7 +125,7 @@ const CEHDAwardsPage = () => {
           </form>
 
           <div className="people-container flex-grow overflow-y-auto">
-            <ul className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-4 overflow-y-auto max-h-[850px]">
+            <ul className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-4 overflow-y-auto max-h-[850px]">
               {filteredAwards.map((award, index) => (
                 <li key={index}>
                   {award.Link ? (
