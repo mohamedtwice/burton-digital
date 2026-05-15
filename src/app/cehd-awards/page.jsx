@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import PageTransition from '@/components/PageTransition';
 import Link from 'next/link';
 import Image from 'next/image';
-import awardsData from '../../../public/data/cehd_awards.json'; // Import the awards data
+import awardsData from '../../../public/data/cehd_awards_2026.json'; // Import the awards data
 
 const CEHDAwardsPage = () => {
   const [search, setSearch] = useState('');
@@ -73,7 +73,7 @@ const CEHDAwardsPage = () => {
 
           <h1 className="text-6xl font-black text-[#7a0019] mb-6">CEHD Awards</h1>
           <div className="">
-            <h3 className="text-2xl font-bold mb-3">Congratulations to our 2024 CEHD Faculty, Staff, and Student award-winners!</h3>
+            <h3 className="text-2xl font-bold mb-3">Congratulations to our 2026 CEHD Faculty, Staff, and Student award-winners!</h3>
             <p className="text-xl mb-8">The CEHD Awards and Honors program recognizes outstanding work in the college each year through a variety of awards. Award recipients are nominated by their peers and award winners are recognized at the annual college Spring Assembly.</p>
           </div>
 
@@ -125,7 +125,7 @@ const CEHDAwardsPage = () => {
           </form>
 
           <div className="people-container flex-grow overflow-y-auto">
-            <ul className="grid grid-cols-1 md:grid-cols-3 gap-4 overflow-y-auto max-h-[850px]">
+            <ul className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-4 overflow-y-auto max-h-[850px]">
               {filteredAwards.map((award, index) => (
                 <li key={index}>
                   {award.Link ? (
